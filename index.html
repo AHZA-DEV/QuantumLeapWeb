@@ -18,41 +18,35 @@
 
 <body class="bg-gray-50">
     <!-- Header -->
+    <!-- index.html -->
     <header class="fixed w-full bg-white shadow-sm z-50">
-        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex w-full">
-                    <!-- Logo section if needed -->
-                    <!-- <div class="flex-shrink-0 flex items-center">
-                        <img class="h-8 w-auto" src="logo.png" alt="Quantum Leap Logo">
-                    </div> -->
-                    <div
-                        class="flex flex-wrap sm:ml-6 sm:flex sm:space-x-8 w-full justify-center sm:justify-start items-center text-center">
-                        <a href="#beranda"
-                            class="border-custom text-custom inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium whitespace-nowrap">Beranda</a>
-                        <a href="#tentang"
-                            class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium whitespace-nowrap">Tentang
-                            Kami</a>
-                        <a href="#galeri"
-                            class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium whitespace-nowrap">Galeri</a>
-                        <a href="#anggota"
-                            class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium whitespace-nowrap">Anggota</a>
-                        <a href="#program"
-                            class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium whitespace-nowrap">Program</a>
-                        <a href="#blog"
-                            class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium whitespace-nowrap">Blog</a>
-                        <a href="#kontak"
-                            class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium whitespace-nowrap">Kontak</a>
-                    </div>
+        <nav class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-end items-center h-16">
+                <!-- Navigation Links -->
+                <div id="nav-menu" class="nav-menu md:flex md:items-center">
+                    <a href="#beranda" class="block md:inline-block px-4 py-2 text-gray-700 hover:text-gray-900">Beranda</a>
+                    <a href="#tentang" class="block md:inline-block px-4 py-2 text-gray-700 hover:text-gray-900">Tentang Kami</a>
+                    <a href="#galeri" class="block md:inline-block px-4 py-2 text-gray-700 hover:text-gray-900">Galeri</a>
+                    <a href="#anggota" class="block md:inline-block px-4 py-2 text-gray-700 hover:text-gray-900">Anggota</a>
+                    <a href="#program" class="block md:inline-block px-4 py-2 text-gray-700 hover:text-gray-900">Program</a>
+                    <a href="#blog" class="block md:inline-block px-4 py-2 text-gray-700 hover:text-gray-900">Blog</a>
+                    <a href="#kontak" class="block md:inline-block px-4 py-2 text-gray-700 hover:text-gray-900">Kontak</a>
                 </div>
+                <!-- Hamburger Button -->
+                <button id="hamburger-button" class="md:hidden text-gray-500 hover:text-gray-700 focus:outline-none ml-4">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
             </div>
         </nav>
     </header>
+
     <main>
         <!-- Hero Section -->
         <section id="beranda" class="pt-16">
             <div class="relative custom-color">
-                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:flex lg:items-center py-24">
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <div class="text-white">
                             <h1 class="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
@@ -63,7 +57,8 @@
                                 Teknologi dan Pendidikan
                             </p>
                             <div class="mt-10">
-                                <button class="bg-slate-200 hover:bg-slate-400 text-custom px-8 py-3 text-base font-medium inline-flex items-center rounded-lg">
+                                <button
+                                    class="bg-slate-200 hover:bg-slate-400 text-custom px-8 py-3 text-base font-medium inline-flex items-center rounded-lg">
                                     Pelajari Lebih Lanjut
                                 </button>
                                 <!-- <a href="#tentang"
@@ -268,17 +263,20 @@
                         <p class="text-custom">Ketua Leting</p>
                     </div>
                     <div class="bg-gray-50 p-6 rounded-lg text-center">
-                        <img src="/galery/undefined.jpeg" alt="Wakil Ketua" class="w-32 h-32 mx-auto rounded-full object-cover">
+                        <img src="/galery/undefined.jpeg" alt="Wakil Ketua"
+                            class="w-32 h-32 mx-auto rounded-full object-cover">
                         <h3 class="mt-6 text-lg font-medium text-gray-900">No undefined</h3>
                         <p class="text-custom">Wakil Ketua</p>
                     </div>
                     <div class="bg-gray-50 p-6 rounded-lg text-center">
-                        <img src="/galery/undefined.jpeg" alt="Sekretaris" class="w-32 h-32 mx-auto rounded-full object-cover">
+                        <img src="/galery/undefined.jpeg" alt="Sekretaris"
+                            class="w-32 h-32 mx-auto rounded-full object-cover">
                         <h3 class="mt-6 text-lg font-medium text-gray-900">No undefined</h3>
                         <p class="text-custom">Sekretaris</p>
                     </div>
                     <div class="bg-gray-50 p-6 rounded-lg text-center">
-                        <img src="/galery/undefined.jpeg" alt="Bendahara" class="w-32 h-32 mx-auto rounded-full object-cover">
+                        <img src="/galery/undefined.jpeg" alt="Bendahara"
+                            class="w-32 h-32 mx-auto rounded-full object-cover">
                         <h3 class="mt-6 text-lg font-medium text-gray-900">No undefined</h3>
                         <p class="text-custom">Bendahara</p>
                     </div>
