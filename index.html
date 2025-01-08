@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Leap - PTI 23</title>
+
+    <link rel="stylesheet" href="style.css">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
+</head>
+
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="fixed w-full bg-white shadow-sm z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex w-full">
+                    <!-- Logo section if needed -->
+                    <!-- <div class="flex-shrink-0 flex items-center">
+                        <img class="h-8 w-auto" src="logo.png" alt="Quantum Leap Logo">
+                    </div> -->
+                    <div
+                        class="flex flex-wrap sm:ml-6 sm:flex sm:space-x-8 w-full justify-center sm:justify-start items-center text-center">
+                        <a href="#beranda"
+                            class="border-custom text-custom inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium whitespace-nowrap">Beranda</a>
+                        <a href="#tentang"
+                            class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium whitespace-nowrap">Tentang
+                            Kami</a>
+                        <a href="#galeri"
+                            class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium whitespace-nowrap">Galeri</a>
+                        <a href="#anggota"
+                            class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium whitespace-nowrap">Anggota</a>
+                        <a href="#program"
+                            class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium whitespace-nowrap">Program</a>
+                        <a href="#blog"
+                            class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium whitespace-nowrap">Blog</a>
+                        <a href="#kontak"
+                            class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium whitespace-nowrap">Kontak</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- Hero Section -->
+        <section id="beranda" class="pt-16">
+            <div class="relative custom-color">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        <div class="text-white">
+                            <h1 class="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
+                                Selamat Datang di Quantum Leap
+                            </h1>
+                            <p class="mt-6 text-xl">
+                                Komunitas Mahasiswa Pendidikan Teknologi Informasi 2023 yang Berdedikasi untuk Kemajuan
+                                Teknologi dan Pendidikan
+                            </p>
+                            <div class="mt-10">
+                                <button class="bg-slate-200 hover:bg-slate-400 text-custom px-8 py-3 text-base font-medium inline-flex items-center rounded-lg">
+                                    Pelajari Lebih Lanjut
+                                </button>
+                                <!-- <a href="#tentang"
+                                    class="bg-slate-200 hover:bg-slate-400 text-custom px-8 py-3 text-base font-medium inline-flex items-center rounded-lg hover:bg-gray-50">
+                                    Pelajari Lebih Lanjut
+                                    <i class="fas fa-arrow-right ml-2"></i>
+                                </a> -->
+                            </div>
+                        </div>
+                        <div class="">
+                            <img src="logo.png" alt="Hero Image" class="w-96 object-cover rounded-lg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="tentang" class="py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h2 class="text-3xl font-bold text-gray-900">Tentang Kami</h2>
+                    <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+                        Quantum Leap adalah komunitas mahasiswa PTI angkatan 2023 yang berkomitmen untuk mengembangkan
+                        potensi dalam bidang teknologi informasi dan pendidikan.
+                    </p>
+                </div>
+                <!-- Values -->
+                <div class="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-3">
+                    <div class="bg-gray-50 p-8 rounded-lg">
+                        <div class="text-custom mb-4">
+                            <i class="fas fa-eye text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900">Visi</h3>
+                        <p class="mt-4 text-gray-600">
+                            Menjadi komunitas terdepan dalam pengembangan teknologi informasi dan pendidikan di
+                            Indonesia.
+                        </p>
+                    </div>
+                    <div class="bg-gray-50 p-8 rounded-lg">
+                        <div class="text-custom mb-4">
+                            <i class="fas fa-bullseye text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900">Misi</h3>
+                        <p class="mt-4 text-gray-600">
+                            Mengembangkan kompetensi anggota melalui pelatihan dan proyek kolaboratif.
+                        </p>
+                    </div>
+                    <div class="bg-gray-50 p-8 rounded-lg">
+                        <div class="text-custom mb-4">
+                            <i class="fas fa-users text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900">Nilai</h3>
+                        <p class="mt-4 text-gray-600">
+                            Inovasi, Kolaborasi, dan Pembelajaran Berkelanjutan.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="galeri" class="py-24 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h2 class="text-3xl font-bold text-gray-900">Galeri Kegiatan</h2>
+                    <p class="mt-4 text-lg text-gray-600">Dokumentasi kegiatan dan momen berharga komunitas Quantum Leap
+                    </p>
+                </div>
+
+                <!-- Tambahkan link CSS Swiper -->
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.css" />
+
+                <!-- Container untuk Swiper -->
+                <div class="mt-16">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <!-- Slide 1 -->
+                            <div class="swiper-slide">
+                                <div class="relative group">
+                                    <img src="/galery/01.jpg" alt="Kegiatan 1"
+                                        class="w-full h-64 object-cover rounded-lg">
+                                    <div
+                                        class="absolute inset-0 bg-black bg-opacity-75 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center">
+                                        <p class="text-white text-lg font-medium">Workshop Teknologi</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Slide 2 -->
+                            <div class="swiper-slide">
+                                <div class="relative group">
+                                    <img src="/galery/02.jpg" alt="Kegiatan 2"
+                                        class="w-full h-64 object-cover rounded-lg">
+                                    <div
+                                        class="absolute inset-0 bg-black bg-opacity-75 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center">
+                                        <p class="text-white text-lg font-medium">Presentasi Proyek</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Slide 3 -->
+                            <div class="swiper-slide">
+                                <div class="relative group">
+                                    <img src="/galery/01.jpg" alt="Kegiatan 3"
+                                        class="w-full h-64 object-cover rounded-lg">
+                                    <div
+                                        class="absolute inset-0 bg-black bg-opacity-75 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center">
+                                        <p class="text-white text-lg font-medium">Team Building</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Slide 4 -->
+                            <div class="swiper-slide">
+                                <div class="relative group">
+                                    <img src="/galery/01.jpg" alt="Kegiatan 1"
+                                        class="w-full h-64 object-cover rounded-lg">
+                                    <div
+                                        class="absolute inset-0 bg-black bg-opacity-75 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center">
+                                        <p class="text-white text-lg font-medium">Workshop Teknologi</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Slide 5 -->
+                            <div class="swiper-slide">
+                                <div class="relative group">
+                                    <img src="/galery/02.jpg" alt="Kegiatan 2"
+                                        class="w-full h-64 object-cover rounded-lg">
+                                    <div
+                                        class="absolute inset-0 bg-black bg-opacity-75 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center">
+                                        <p class="text-white text-lg font-medium">Presentasi Proyek</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Slide 6 -->
+                            <div class="swiper-slide">
+                                <div class="relative group">
+                                    <img src="/galery/01.jpg" alt="Kegiatan 3"
+                                        class="w-full h-64 object-cover rounded-lg">
+                                    <div
+                                        class="absolute inset-0 bg-black bg-opacity-75 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center">
+                                        <p class="text-white text-lg font-medium">Team Building</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Tambahkan slide lainnya sesuai kebutuhan -->
+                        </div>
+                        <!-- Tambahkan navigasi -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <!-- Tambahkan pagination -->
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- <section id="galeri" class="py-24 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h2 class="text-3xl font-bold text-gray-900">Galeri Kegiatan</h2>
+                    <p class="mt-4 text-lg text-gray-600">Dokumentasi kegiatan dan momen berharga komunitas Quantum Leap
+                    </p>
+                </div>
+                <div class="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                    <div class="relative group">
+                        <img src="/api/placeholder/400/300" alt="Kegiatan 1"
+                            class="w-full h-64 object-cover rounded-lg">
+                        <div
+                            class="absolute inset-0 bg-black bg-opacity-75 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center">
+                            <p class="text-white text-lg font-medium">Workshop Teknologi</p>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <img src="/api/placeholder/400/300" alt="Kegiatan 2"
+                            class="w-full h-64 object-cover rounded-lg">
+                        <div
+                            class="absolute inset-0 bg-black bg-opacity-75 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center">
+                            <p class="text-white text-lg font-medium">Presentasi Proyek</p>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <img src="/api/placeholder/400/300" alt="Kegiatan 3"
+                            class="w-full h-64 object-cover rounded-lg">
+                        <div
+                            class="absolute inset-0 bg-black bg-opacity-75 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center">
+                            <p class="text-white text-lg font-medium">Team Building</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- Members Section -->
+        <section id="anggota" class="py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h2 class="text-3xl font-bold text-gray-900">Anggota Komunitas</h2>
+                    <p class="mt-4 text-lg text-gray-600">Tim kami yang berdedikasi untuk kemajuan Quantum Leap</p>
+                </div>
+                <div class="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+                    <div class="bg-gray-50 p-6 rounded-lg text-center">
+                        <img src="/galery/ketua.jpeg" alt="Ketua" class="w-32 h-32 mx-auto rounded-full object-cover">
+                        <h3 class="mt-6 text-lg font-medium text-gray-900">M. Fajar Affan</h3>
+                        <p class="text-custom">Ketua Leting</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg text-center">
+                        <img src="/galery/undefined.jpeg" alt="Wakil Ketua" class="w-32 h-32 mx-auto rounded-full object-cover">
+                        <h3 class="mt-6 text-lg font-medium text-gray-900">No undefined</h3>
+                        <p class="text-custom">Wakil Ketua</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg text-center">
+                        <img src="/galery/undefined.jpeg" alt="Sekretaris" class="w-32 h-32 mx-auto rounded-full object-cover">
+                        <h3 class="mt-6 text-lg font-medium text-gray-900">No undefined</h3>
+                        <p class="text-custom">Sekretaris</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg text-center">
+                        <img src="/galery/undefined.jpeg" alt="Bendahara" class="w-32 h-32 mx-auto rounded-full object-cover">
+                        <h3 class="mt-6 text-lg font-medium text-gray-900">No undefined</h3>
+                        <p class="text-custom">Bendahara</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Programs Section -->
+        <!-- <section id="program" class="py-24 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h2 class="text-3xl font-bold text-gray-900">Program Unggulan</h2>
+                    <p class="mt-4 text-lg text-gray-600">Program-program inovatif untuk pengembangan anggota</p>
+                </div>
+                <div class="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                    <div class="bg-white p-8 rounded-lg shadow-sm">
+                        <div class="text-custom mb-4">
+                            <i class="fas fa-laptop-code text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900">Coding Bootcamp</h3>
+                        <p class="mt-4 text-gray-600">
+                            Pelatihan intensif pemrograman web dan mobile untuk mahasiswa PTI.
+                        </p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-sm">
+                        <div class="text-custom mb-4">
+                            <i class="fas fa-chalkboard-teacher text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900">Workshop Pendidikan</h3>
+                        <p class="mt-4 text-gray-600">
+                            Pengembangan metode pembelajaran berbasis teknologi.
+                        </p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-sm">
+                        <div class="text-custom mb-4">
+                            <i class="fas fa-project-diagram text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900">Proyek Kolaboratif</h3>
+                        <p class="mt-4 text-gray-600">
+                            Pengembangan proyek teknologi pendidikan secara tim.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- Blog Section -->
+        <section id="blog" class="py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h2 class="text-3xl font-bold text-gray-900">Blog & Artikel</h2>
+                    <p class="mt-4 text-lg text-gray-600">Informasi terkini seputar teknologi dan pendidikan</p>
+                </div>
+                <div class="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                    <article class="bg-gray-50 rounded-lg overflow-hidden">
+                        <img src="/galery/Empty Page.jpeg" alt="Artikel 1" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-900">Undefined Blog</h3>
+                            <p class="mt-4 text-gray-600">
+                                Belum Punya Blog
+                            </p>
+                            <a href="#" class="mt-4 text-custom inline-flex items-center">
+                                Baca selengkapnya
+                                <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </article>
+                    <article class="bg-gray-50 rounded-lg overflow-hidden">
+                        <img src="/galery/Empty Page.jpeg" alt="Artikel 2" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-900">Undefined Blog</h3>
+                            <p class="mt-4 text-gray-600">
+                                Belum Punya Blog
+                            </p>
+                            <a href="#" class="mt-4 text-custom inline-flex items-center">
+                                Baca selengkapnya
+                                <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </article>
+                    <article class="bg-gray-50 rounded-lg overflow-hidden">
+                        <img src="/galery/Empty Page.jpeg" alt="Artikel 3" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-900">Undefined Blog</h3>
+                            <p class="mt-4 text-gray-600">
+                                Belum Punya Blog
+                            </p>
+                            <a href="#" class="mt-4 text-custom inline-flex items-center">
+                                Baca selengkapnya
+                                <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </article>
+                    <article class="bg-gray-50 rounded-lg overflow-hidden">
+                        <img src="/galery/Empty Page.jpeg" alt="Artikel 3" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-900">Undefined Blog</h3>
+                            <p class="mt-4 text-gray-600">
+                                Belum Punya Blog
+                            </p>
+                            <a href="#" class="mt-4 text-custom inline-flex items-center">
+                                Baca selengkapnya
+                                <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="kontak" class="py-24 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                    <div>
+                        <h2 class="text-3xl font-bold text-gray-900">Hubungi Kami</h2>
+                        <p class="mt-4 text-lg text-gray-600">
+                            Kami senang mendengar dari Anda. Kirimkan pesan atau temukan kami di media sosial.
+                        </p>
+                        <div class="mt-8 space-y-6">
+                            <div class="flex items-center">
+                                <i class="fas fa-envelope text-custom w-6"></i>
+                                <span class="ml-4 text-gray-600">quantumleap@email.com</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-phone text-custom w-6"></i>
+                                <span class="ml-4 text-gray-600">+62 812 3456 7890</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-map-marker-alt text-custom w-6"></i>
+                                <span class="ml-4 text-gray-600">Kampus PTI, Gedung A Lantai 3</span>
+                            </div>
+                        </div>
+                        <div class="mt-8 flex space-x-6">
+                            <a href="#" class="text-custom hover:text-gray-900">
+                                <i class="fab fa-instagram text-2xl"></i>
+                            </a>
+                            <a href="#" class="text-custom hover:text-gray-900">
+                                <i class="fab fa-twitter text-2xl"></i>
+                            </a>
+                            <a href="#" class="text-custom hover:text-gray-900">
+                                <i class="fab fa-linkedin text-2xl"></i>
+                            </a>
+                            <a href="#" class="text-custom hover:text-gray-900">
+                                <i class="fab fa-youtube text-2xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- <form class="space-y-6">
+                        <div>
+                            <label for="nama" class="block text-sm font-medium text-gray-700">Nama Lengkap</label>
+                            <input type="text" id="nama" name="nama"
+                                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-custom focus:ring-custom">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                            <input type="email" id="email" name="email"
+                                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-custom focus:ring-custom">
+                        </div>
+                        <div>
+                            <label for="pesan" class="block text-sm font-medium text-gray-700">Pesan</label>
+                            <textarea id="pesan" name="pesan" rows="4"
+                                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-custom focus:ring-custom"></textarea>
+                        </div>
+                        <button type="submit"
+                            class="w-full bg-custom text-white px-4 py-2 text-sm font-medium rounded-lg hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-custom">
+                            Kirim Pesan
+                        </button>
+                    </form> -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <img class="h-20" src="/logo.png" alt="Quantum Leap Logo">
+                    <p class="mt-4 text-gray-400 text-sm">
+                        Komunitas mahasiswa PTI 23 <br \> yang berdedikasi untuk kemajuan teknologi dan pendidikan.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Link Cepat</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#beranda" class="hover:text-white">Beranda</a></li>
+                        <li><a href="#tentang" class="hover:text-white">Tentang Kami</a></li>
+                        <li><a href="#galeri" class="hover:text-white">Galeri</a></li>
+                        <li><a href="#program" class="hover:text-white">Program</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Program</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">Coding Bootcamp</a></li>
+                        <li><a href="#" class="hover:text-white">Workshop</a></li>
+                        <li><a href="#" class="hover:text-white">Proyek Tim</a></li>
+                        <li><a href="#" class="hover:text-white">Mentoring</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Kontak</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Email: quantumleap@email.com</li>
+                        <li>Tel: +62 812 3456 7890</li>
+                        <!-- <li>Kampus PTI, Gedung A Lantai 3</li> -->
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-800">
+                <p class="text-center text-gray-400 text-sm">
+                    © 2024 Quantum Leap PTI 23. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
