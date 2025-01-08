@@ -38,3 +38,30 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 
 
+
+// Tunggu sampai DOM selesai dimuat
+document.addEventListener('DOMContentLoaded', function() {
+    // Ambil elemen yang diperlukan
+    const hamburgerButton = document.getElementById('hamburger-button');
+    const navMenu = document.getElementById('nav-menu');
+
+    // Toggle menu saat hamburger diklik
+    hamburgerButton.addEventListener('click', function(e) {
+        e.stopPropagation();
+        navMenu.classList.toggle('active');
+    });
+
+    // Tutup menu saat mengklik di luar menu
+    document.addEventListener('click', function(event) {
+        if (!navMenu.contains(event.target) && !hamburgerButton.contains(event.target)) {
+            navMenu.classList.remove('active');
+        }
+    });
+
+    // Tutup menu saat ukuran window berubah ke desktop
+    window.addEventListener('resize', function() {
+        if (window.innerWidth >= 768) {
+            navMenu.classList.remove('active');
+        }
+    });
+});
