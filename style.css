@@ -1,0 +1,52 @@
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.custom-color {
+  background-color: #000000;
+}
+
+.text-custom {
+  color: #000000;
+}
+
+.border-custom {
+  border-color: #000000;
+}
+
+.hover\:bg-custom-dark:hover {
+  background-color: #1a1a1a;
+}
+
+.focus\:border-custom:focus {
+  border-color: #000000;
+}
+
+.focus\:ring-custom:focus {
+  --tw-ring-color: #000000;
+}
+
+
+
+
+
+
+.swiper {
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #000000;
+}
+
+.swiper-pagination-bullet-active {
+  background: #000000;
+}
