@@ -21,26 +21,40 @@
     <!-- index.html -->
     <header class="fixed w-full bg-white shadow-sm z-50">
         <nav class="max-w-7xl mx-auto px-4">
-            <div class="flex justify-end items-center h-16">
-                <!-- Navigation Links -->
-                <div id="nav-menu" class="nav-menu md:flex md:items-center">
-                    <a href="#beranda" class="block md:inline-block px-4 py-2 text-gray-700 hover:text-gray-900">Beranda</a>
-                    <a href="#tentang" class="block md:inline-block px-4 py-2 text-gray-700 hover:text-gray-900">Tentang Kami</a>
-                    <a href="#galeri" class="block md:inline-block px-4 py-2 text-gray-700 hover:text-gray-900">Galeri</a>
-                    <a href="#anggota" class="block md:inline-block px-4 py-2 text-gray-700 hover:text-gray-900">Anggota</a>
-                    <a href="#program" class="block md:inline-block px-4 py-2 text-gray-700 hover:text-gray-900">Program</a>
-                    <a href="#blog" class="block md:inline-block px-4 py-2 text-gray-700 hover:text-gray-900">Blog</a>
-                    <a href="#kontak" class="block md:inline-block px-4 py-2 text-gray-700 hover:text-gray-900">Kontak</a>
+            <div class="flex justify-between items-center h-16">
+                <!-- Teks Quantum Leap -->
+                <div class="text-xl font-bold text-gray-800">
+                    Quantum Leap
                 </div>
+                
+                <!-- Navigation Links -->
+                <div id="nav-menu" class="nav-menu md:flex md:items-center hidden">
+                    <a href="#beranda"
+                        class="block md:inline-block px-4 py-2 text-gray-700 hover:text-gray-900">Beranda</a>
+                    <a href="#tentang" class="block md:inline-block px-4 py-2 text-gray-700 hover:text-gray-900">Tentang
+                        Kami</a>
+                    <a href="#galeri"
+                        class="block md:inline-block px-4 py-2 text-gray-700 hover:text-gray-900">Galeri</a>
+                    <a href="#anggota"
+                        class="block md:inline-block px-4 py-2 text-gray-700 hover:text-gray-900">Anggota</a>
+                    <a href="#blog"
+                        class="block md:inline-block px-4 py-2 text-gray-700 hover:text-gray-900">Blog</a>
+                    <a href="#kontak"
+                        class="block md:inline-block px-4 py-2 text-gray-700 hover:text-gray-900">Kontak</a>
+                </div>
+                
                 <!-- Hamburger Button -->
-                <button id="hamburger-button" class="md:hidden text-gray-500 hover:text-gray-700 focus:outline-none ml-4">
+                <button id="hamburger-button"
+                    class="md:hidden text-gray-500 hover:text-gray-700 focus:outline-none ml-4">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
             </div>
         </nav>
     </header>
+    
 
     <main>
         <!-- Hero Section -->
@@ -57,10 +71,18 @@
                                 Teknologi dan Pendidikan
                             </p>
                             <div class="mt-10">
-                                <button
+                                <a href="https://www.instagram.com/quantumleap_23/" target="_blank" class="text-custom hover:text-gray-900">
+                                    <button
+                                        class="bg-slate-200 hover:bg-slate-400 text-custom px-8 py-3 mr-4 text-base font-medium inline-flex items-center rounded-lg">
+                                        kunjugi instagram <i class="fab fa-instagram text-2xl ml-2"></i>
+                                    </button>
+                                </a>                                
+
+
+                                <!-- <button
                                     class="bg-slate-200 hover:bg-slate-400 text-custom px-8 py-3 text-base font-medium inline-flex items-center rounded-lg">
                                     Pelajari Lebih Lanjut
-                                </button>
+                                </button> -->
                                 <!-- <a href="#tentang"
                                     class="bg-slate-200 hover:bg-slate-400 text-custom px-8 py-3 text-base font-medium inline-flex items-center rounded-lg hover:bg-gray-50">
                                     Pelajari Lebih Lanjut
@@ -139,66 +161,188 @@
                             <!-- Slide 1 -->
                             <div class="swiper-slide">
                                 <div class="relative group">
-                                    <img src="/galery/01.jpg" alt="Kegiatan 1"
+                                    <img src="/galery/Kegiatan/FamilyGathering.jpg" alt="Kegiatan 1"
                                         class="w-full h-64 object-cover rounded-lg">
                                     <div
                                         class="absolute inset-0 bg-black bg-opacity-75 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center">
-                                        <p class="text-white text-lg font-medium">Workshop Teknologi</p>
+                                        <p class="text-white text-lg font-medium">Family Gathering</p>
                                     </div>
                                 </div>
                             </div>
                             <!-- Slide 2 -->
                             <div class="swiper-slide">
                                 <div class="relative group">
-                                    <img src="/galery/02.jpg" alt="Kegiatan 2"
+                                    <img src="/galery/Kegiatan/BukaBersama.jpg" alt="Kegiatan 2"
                                         class="w-full h-64 object-cover rounded-lg">
                                     <div
                                         class="absolute inset-0 bg-black bg-opacity-75 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center">
-                                        <p class="text-white text-lg font-medium">Presentasi Proyek</p>
+                                        <p class="text-white text-lg font-medium">Buka Bersama</p>
                                     </div>
                                 </div>
                             </div>
                             <!-- Slide 3 -->
                             <div class="swiper-slide">
                                 <div class="relative group">
-                                    <img src="/galery/01.jpg" alt="Kegiatan 3"
+                                    <img src="/galery/Kegiatan/Futsal1.jpg" alt="Kegiatan 3"
                                         class="w-full h-64 object-cover rounded-lg">
                                     <div
                                         class="absolute inset-0 bg-black bg-opacity-75 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center">
-                                        <p class="text-white text-lg font-medium">Team Building</p>
+                                        <p class="text-white text-lg font-medium">Futsal</p>
                                     </div>
                                 </div>
                             </div>
                             <!-- Slide 4 -->
                             <div class="swiper-slide">
                                 <div class="relative group">
-                                    <img src="/galery/01.jpg" alt="Kegiatan 1"
+                                    <img src="/galery/Kegiatan/Futsal2.jpg" alt="Kegiatan 1"
                                         class="w-full h-64 object-cover rounded-lg">
                                     <div
                                         class="absolute inset-0 bg-black bg-opacity-75 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center">
-                                        <p class="text-white text-lg font-medium">Workshop Teknologi</p>
+                                        <p class="text-white text-lg font-medium">Futsal</p>
                                     </div>
                                 </div>
                             </div>
                             <!-- Slide 5 -->
                             <div class="swiper-slide">
                                 <div class="relative group">
-                                    <img src="/galery/02.jpg" alt="Kegiatan 2"
+                                    <img src="/galery/Kegiatan/Futsal3.jpg" alt="Kegiatan 2"
                                         class="w-full h-64 object-cover rounded-lg">
                                     <div
                                         class="absolute inset-0 bg-black bg-opacity-75 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center">
-                                        <p class="text-white text-lg font-medium">Presentasi Proyek</p>
+                                        <p class="text-white text-lg font-medium">Futsal</p>
                                     </div>
                                 </div>
                             </div>
                             <!-- Slide 6 -->
                             <div class="swiper-slide">
                                 <div class="relative group">
-                                    <img src="/galery/01.jpg" alt="Kegiatan 3"
+                                    <img src="/galery/Kegiatan/Futsal4.jpg" alt="Kegiatan 3"
                                         class="w-full h-64 object-cover rounded-lg">
                                     <div
                                         class="absolute inset-0 bg-black bg-opacity-75 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center">
-                                        <p class="text-white text-lg font-medium">Team Building</p>
+                                        <p class="text-white text-lg font-medium">Futsal</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Slide 7 -->
+                            <div class="swiper-slide">
+                                <div class="relative group">
+                                    <img src="/galery/Kegiatan/Futsal5.jpg" alt="Kegiatan 3"
+                                        class="w-full h-64 object-cover rounded-lg">
+                                    <div
+                                        class="absolute inset-0 bg-black bg-opacity-75 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center">
+                                        <p class="text-white text-lg font-medium">Futsal</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Slide 8 -->
+                            <div class="swiper-slide">
+                                <div class="relative group">
+                                    <img src="/galery/Kegiatan/Futsal6.jpg" alt="Kegiatan 3"
+                                        class="w-full h-64 object-cover rounded-lg">
+                                    <div
+                                        class="absolute inset-0 bg-black bg-opacity-75 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center">
+                                        <p class="text-white text-lg font-medium">Futsal</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Slide 9 -->
+                            <div class="swiper-slide">
+                                <div class="relative group">
+                                    <img src="/galery/Kegiatan/Futsal7.jpg" alt="Kegiatan 3"
+                                        class="w-full h-64 object-cover rounded-lg">
+                                    <div
+                                        class="absolute inset-0 bg-black bg-opacity-75 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center">
+                                        <p class="text-white text-lg font-medium">Futsal</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Slide 10 -->
+                            <div class="swiper-slide">
+                                <div class="relative group">
+                                    <img src="/galery/Kegiatan/Futsal8.jpg" alt="Kegiatan 3"
+                                        class="w-full h-64 object-cover rounded-lg">
+                                    <div
+                                        class="absolute inset-0 bg-black bg-opacity-75 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center">
+                                        <p class="text-white text-lg font-medium">Futsal</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Slide 11 -->
+                            <div class="swiper-slide">
+                                <div class="relative group">
+                                    <img src="/galery/Kegiatan/Futsal9.jpg" alt="Kegiatan 3"
+                                        class="w-full h-64 object-cover rounded-lg">
+                                    <div
+                                        class="absolute inset-0 bg-black bg-opacity-75 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center">
+                                        <p class="text-white text-lg font-medium">Futsal</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Slide 12 -->
+                            <div class="swiper-slide">
+                                <div class="relative group">
+                                    <img src="/galery/Kegiatan/Futsal10.jpg" alt="Kegiatan 3"
+                                        class="w-full h-64 object-cover rounded-lg">
+                                    <div
+                                        class="absolute inset-0 bg-black bg-opacity-75 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center">
+                                        <p class="text-white text-lg font-medium">Futsal</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Slide 13 -->
+                            <div class="swiper-slide">
+                                <div class="relative group">
+                                    <img src="/galery/Kegiatan/Peusijuek1.jpg" alt="Kegiatan 3"
+                                        class="w-full h-64 object-cover rounded-lg">
+                                    <div
+                                        class="absolute inset-0 bg-black bg-opacity-75 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center">
+                                        <p class="text-white text-lg font-medium">Peusijuek</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Slide 14 -->
+                            <div class="swiper-slide">
+                                <div class="relative group">
+                                    <img src="/galery/Kegiatan/Peusijuek2.jpg" alt="Kegiatan 3"
+                                        class="w-full h-64 object-cover rounded-lg">
+                                    <div
+                                        class="absolute inset-0 bg-black bg-opacity-75 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center">
+                                        <p class="text-white text-lg font-medium">Peusijuek</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Slide 15 -->
+                            <div class="swiper-slide">
+                                <div class="relative group">
+                                    <img src="/galery/Kegiatan/AkreditasiProdi.jpg" alt="Kegiatan 3"
+                                        class="w-full h-64 object-cover rounded-lg">
+                                    <div
+                                        class="absolute inset-0 bg-black bg-opacity-75 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center">
+                                        <p class="text-white text-lg font-medium">Akreditasi Prodi</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Slide 16 -->
+                            <div class="swiper-slide">
+                                <div class="relative group">
+                                    <img src="/galery/Kegiatan/LKMTIII.jpg" alt="Kegiatan 3"
+                                        class="w-full h-64 object-cover rounded-lg">
+                                    <div
+                                        class="absolute inset-0 bg-black bg-opacity-75 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center">
+                                        <p class="text-white text-lg font-medium">Latihan Kepemimpinan Mahasiswa
+                                            tarbiyah</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Slide 17 -->
+                            <div class="swiper-slide">
+                                <div class="relative group">
+                                    <img src="/galery/Kegiatan/Maulid.jpg" alt="Kegiatan 3"
+                                        class="w-full h-64 object-cover rounded-lg">
+                                    <div
+                                        class="absolute inset-0 bg-black bg-opacity-75 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center">
+                                        <p class="text-white text-lg font-medium">Maulid Nabi Muhammad SAW</p>
                                     </div>
                                 </div>
                             </div>
@@ -209,6 +353,25 @@
                         <div class="swiper-button-prev"></div>
                         <!-- Tambahkan pagination -->
                         <div class="swiper-pagination"></div>
+                    </div>
+                    <div class="mt-8 text-center">
+                        <a href="#">
+                            <!-- Link Menuju Web Album -->
+                            <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded" 
+                                onclick="showCustomAlert()">
+                                See All Photos
+                            </button>
+                        </a>
+
+                        <div id="custom-alert" class="hidden fixed inset-0 flex items-center justify-center z-50">
+                            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                                <p class="text-gray-700 text-lg font-medium">Maaf, Page Belum Tersedia</p>
+                                <button onclick="hideCustomAlert()" class="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
+                                    OK
+                                </button>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -370,19 +533,6 @@
                             </a>
                         </div>
                     </article>
-                    <article class="bg-gray-50 rounded-lg overflow-hidden">
-                        <img src="/galery/Empty Page.jpeg" alt="Artikel 3" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold text-gray-900">Undefined Blog</h3>
-                            <p class="mt-4 text-gray-600">
-                                Belum Punya Blog
-                            </p>
-                            <a href="#" class="mt-4 text-custom inline-flex items-center">
-                                Baca selengkapnya
-                                <i class="fas fa-arrow-right ml-2"></i>
-                            </a>
-                        </div>
-                    </article>
                 </div>
             </div>
         </section>
@@ -397,20 +547,21 @@
                             Kami senang mendengar dari Anda. Kirimkan pesan atau temukan kami di media sosial.
                         </p>
                         <div class="mt-8 space-y-6">
-                            <div class="flex items-center">
+                            <!-- <div class="flex items-center">
                                 <i class="fas fa-envelope text-custom w-6"></i>
                                 <span class="ml-4 text-gray-600">quantumleap@email.com</span>
-                            </div>
+                            </div> -->
                             <div class="flex items-center">
                                 <i class="fas fa-phone text-custom w-6"></i>
                                 <span class="ml-4 text-gray-600">+62 812 3456 7890</span>
                             </div>
-                            <div class="flex items-center">
+                            <!-- <div class="flex items-center">
                                 <i class="fas fa-map-marker-alt text-custom w-6"></i>
                                 <span class="ml-4 text-gray-600">Kampus PTI, Gedung A Lantai 3</span>
-                            </div>
+                            </div> -->
                         </div>
-                        <div class="mt-8 flex space-x-6">
+                        <!-- MEDSOS -->
+                        <!-- <div class="mt-8 flex space-x-6">
                             <a href="#" class="text-custom hover:text-gray-900">
                                 <i class="fab fa-instagram text-2xl"></i>
                             </a>
@@ -418,12 +569,12 @@
                                 <i class="fab fa-twitter text-2xl"></i>
                             </a>
                             <a href="#" class="text-custom hover:text-gray-900">
-                                <i class="fab fa-linkedin text-2xl"></i>
+                                <i class="fab fa-tiktok text-2xl"></i>
                             </a>
                             <a href="#" class="text-custom hover:text-gray-900">
                                 <i class="fab fa-youtube text-2xl"></i>
                             </a>
-                        </div>
+                        </div> -->
                     </div>
                     <!-- <form class="space-y-6">
                         <div>
@@ -467,10 +618,10 @@
                         <li><a href="#beranda" class="hover:text-white">Beranda</a></li>
                         <li><a href="#tentang" class="hover:text-white">Tentang Kami</a></li>
                         <li><a href="#galeri" class="hover:text-white">Galeri</a></li>
-                        <li><a href="#program" class="hover:text-white">Program</a></li>
+                        <!-- <li><a href="#program" class="hover:text-white">Program</a></li> -->
                     </ul>
                 </div>
-                <div>
+                <!-- <div>
                     <h3 class="text-white font-semibold mb-4">Program</h3>
                     <ul class="space-y-2 text-gray-400">
                         <li><a href="#" class="hover:text-white">Coding Bootcamp</a></li>
@@ -478,7 +629,7 @@
                         <li><a href="#" class="hover:text-white">Proyek Tim</a></li>
                         <li><a href="#" class="hover:text-white">Mentoring</a></li>
                     </ul>
-                </div>
+                </div> -->
                 <div>
                     <h3 class="text-white font-semibold mb-4">Kontak</h3>
                     <ul class="space-y-2 text-gray-400">
