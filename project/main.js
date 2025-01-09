@@ -4,7 +4,7 @@ const galleryItems = [
         id: 1,
         title: 'Peusijuk',
         category: 'events',
-        imageUrl: 'Kegiatan/peusijuek2.jpg',
+        imageUrl: 'Kegiatan/Peusijuek2.jpg',
         downloads: 0,
         date: '2024-01-15'
     },
@@ -28,7 +28,7 @@ const galleryItems = [
         id: 4,
         title: 'Futsal',
         category: 'activities',
-        imageUrl: 'Kegiatan/futsal1.jpg',
+        imageUrl: 'Kegiatan/Futsal1.jpg',
         downloads: 0,
         date: '2024-02-15'
     },
@@ -36,7 +36,7 @@ const galleryItems = [
         id: 5,
         title: 'futsal',
         category: 'activities',
-        imageUrl: 'Kegiatan/futsal2.jpg',
+        imageUrl: 'Kegiatan/Futsal2.jpg',
         downloads: 0,
         date: '2024-02-15'
     },
@@ -44,7 +44,7 @@ const galleryItems = [
         id: 6,
         title: 'Futsal',
         category: 'activities',
-        imageUrl: 'Kegiatan/futsal3.jpg',
+        imageUrl: 'Kegiatan/Futsal3.jpg',
         downloads: 0,
         date: '2024-02-15'
     },
@@ -52,7 +52,7 @@ const galleryItems = [
         id: 7,
         title: 'Futsal',
         category: 'activities',
-        imageUrl: 'Kegiatan/futsal4.jpg',
+        imageUrl: 'Kegiatan/Futsal4.jpg',
         downloads: 0,
         date: '2024-02-15'
     },
@@ -60,7 +60,7 @@ const galleryItems = [
         id: 8,
         title: 'Futsal',
         category: 'activities',
-        imageUrl: 'Kegiatan/futsal5.jpg',
+        imageUrl: 'Kegiatan/Futsal5.jpg',
         downloads: 0,
         date: '2024-02-15'
     },
@@ -68,7 +68,7 @@ const galleryItems = [
         id: 8,
         title: 'Futsal',
         category: 'activities',
-        imageUrl: 'Kegiatan/futsal6.jpg',
+        imageUrl: 'Kegiatan/Futsal6.jpg',
         downloads: 0,
         date: '2024-02-15'
     },
@@ -76,7 +76,7 @@ const galleryItems = [
         id: 9,
         title: 'Futsal',
         category: 'activities',
-        imageUrl: 'Kegiatan/futsal7.jpg',
+        imageUrl: 'Kegiatan/Futsal7.jpg',
         downloads: 0,
         date: '2024-02-15'
     },
@@ -84,7 +84,7 @@ const galleryItems = [
         id: 10,
         title: 'Futsal',
         category: 'activities',
-        imageUrl: 'Kegiatan/futsal8.jpg',
+        imageUrl: 'Kegiatan/Futsal8.jpg',
         downloads: 0,
         date: '2024-02-15'
     },
@@ -92,7 +92,7 @@ const galleryItems = [
         id: 11,
         title: 'Futsal',
         category: 'activities',
-        imageUrl: 'Kegiatan/futsal9.jpg',
+        imageUrl: 'Kegiatan/Futsal9.jpg',
         downloads: 0,
         date: '2024-02-15'
     },
@@ -100,7 +100,7 @@ const galleryItems = [
         id: 12,
         title: 'Futsal',
         category: 'activities',
-        imageUrl: 'Kegiatan/futsal10.jpg',
+        imageUrl: 'Kegiatan/Futsal10.jpg',
         downloads: 0,
         date: '2024-02-15'
     },
@@ -116,7 +116,7 @@ const galleryItems = [
         id: 14,
         title: 'Peusijuek',
         category: 'activities',
-        imageUrl: 'Kegiatan/peusijuek1.jpg',
+        imageUrl: 'Kegiatan/Peusijuek1.jpg',
         downloads: 0,
         date: '2024-02-15'
     },
