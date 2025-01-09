@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Leap Gallery</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/css/lightbox.min.css">
+    <link rel="stylesheet" href="galeri.css">
+</head>
+
+<body class="bg-gray-100">
+    <!-- Header -->
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <nav class="container mx-auto px-6 py-3">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold text-indigo-600">Quantum Leap</span>
+                </div>
+
+                <div id="nav-menu" class="nav-menu md:flex md:items-center hidden">
+                    <a href="#home"
+                        class="block md:inline-block px-4 py-2 text-gray-700 hover:text-gray-900">Beranda</a>
+                    <a href="#gallery"
+                        class="block md:inline-block px-4 py-2 text-gray-700 hover:text-gray-900">Galeri</a>
+                    <a href="#contact"
+                        class="block md:inline-block px-4 py-2 text-gray-700 hover:text-gray-900">Kontak</a>
+                    <a href="/index.html"
+                        class="block md:inline-block px-4 py-2 text-gray-700 hover:text-gray-900">Kembali</a>
+                </div>
+
+                <!-- <div id="nav-menu" class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-indigo-600">Home</a>
+                    <a href="#gallery" class="text-gray-700 hover:text-indigo-600">Gallery</a>
+                    <a href="#contact" class="text-gray-700 hover:text-indigo-600">Albums</a>
+                    <a href="/index.html" class="text-gray-700 hover:text-indigo-600">Kembali</a>
+                </div> -->
+
+                <!-- Hamburger Button -->
+                <button id="hamburger-button"
+                    class="md:hidden text-gray-500 hover:text-gray-700 focus:outline-none ml-4">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Banner -->
+    <section id="home" class="pt-20">
+        <div class="relative h-[600px]">
+            <div class="absolute inset-0 bg-black/50 z-10"></div>
+            <div class="absolute inset-0 z-20 flex items-center justify-center text-center">
+                <div class="text-white">
+                    <h1 class="text-5xl font-bold mb-4">Welcome to Quantum Leap</h1>
+                    <p class="text-xl">Capturing moments, creating memories</p>
+                </div>
+            </div>
+            <div class="absolute inset-0 z-0">
+                <div class="hero-slider h-full"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <section class="py-8 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-md mx-auto">
+                <div class="relative">
+                    <input type="text" id="search" placeholder="Search photos..."
+                        class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-600">
+                    <button class="absolute right-3 top-2">
+                        <i class="fas fa-search text-gray-400"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-8">Our Gallery</h2>
+
+            <!-- Filter Buttons -->
+            <!-- <div class="flex flex-wrap justify-center gap-4 mb-8">
+                <button class="filter-btn active px-4 py-2 rounded-full bg-indigo-600 text-white" data-category="all">All</button>
+                <button class="filter-btn px-4 py-2 rounded-full bg-gray-200 hover:bg-indigo-600 hover:text-white" data-category="events">Events</button>
+                <button class="filter-btn px-4 py-2 rounded-full bg-gray-200 hover:bg-indigo-600 hover:text-white" data-category="members">Members</button>
+                <button class="filter-btn px-4 py-2 rounded-full bg-gray-200 hover:bg-indigo-600 hover:text-white" data-category="activities">Activities</button>
+            </div> -->
+
+            <!-- Gallery Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="gallery-grid">
+                <!-- Gallery items will be dynamically added here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Albums Section -->
+    <!-- <section id="albums" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-8">Photo Albums</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="albums-grid"> 
+                Album items will be dynamically added here
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">About Us</h3>
+                    <p>Quantum Leap is a community dedicated to capturing and sharing memorable moments through
+                        photography.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact</h3>
+                    <p>Email: info@quantumleap.com</p>
+                    <p>Phone: (123) 456-7890</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:text-indigo-400"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" class="hover:text-indigo-400"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="hover:text-indigo-400"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p>&copy; 2024 Quantum Leap. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/js/lightbox.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

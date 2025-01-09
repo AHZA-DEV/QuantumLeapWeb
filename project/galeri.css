@@ -1,0 +1,85 @@
+/* Custom styles */
+.hero-slider {
+    background-image: url('Kegiatan/FamilyGathering.jpg');
+    background-size: cover;
+    background-position: center;
+    /* animation: slideShow 20s infinite; */
+}
+
+@keyframes slideShow {
+    0%, 100% { opacity: 1; }
+    45% { opacity: 1; }
+    50% { opacity: 0; }
+    95% { opacity: 0; }
+}
+
+.gallery-item {
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.02);
+}
+
+.filter-btn.active {
+    background-color: #4f46e5;
+    color: white;
+}
+
+/* Lightbox customization */
+.lb-data .lb-details {
+    width: 100%;
+    text-align: center;
+}
+
+.lb-data .lb-download {
+    position: absolute;
+    right: 45px;
+    top: 0;
+}
+
+
+
+
+
+/* Style untuk menu navigasi */
+.nav-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0; /* Changed from left: 0 to right: 0 */
+    width: 200px; /* Added fixed width for dropdown */
+    background-color: white;
+    padding: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Ketika menu aktif */
+  .nav-menu.active {
+    display: block;
+  }
+  
+  /* Media query untuk desktop */
+  @media (min-width: 768px) {
+    .nav-menu {
+        position: static;
+        display: flex;
+        width: auto;
+        box-shadow: none;
+        padding: 0;
+    }
+    #hamburger-button {
+        display: none;
+    }
+  }
+  
+  /* Animasi untuk menu */
+  .nav-menu {
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Hover efek untuk link */
+  .nav-menu a:hover {
+    background-color: #f3f4f6;
+    border-radius: 0.25rem;
+  }
