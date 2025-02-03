@@ -120,6 +120,14 @@ const galleryItems = [
         downloads: 0,
         date: '2024-02-15'
     },
+    {
+        id: 15,
+        title: 'Salah satu keluarga quantum mengikuti DIKLATPIM',
+        category: 'activities',
+        imageUrl: 'Kegiatan/Diklat.jpg',
+        downloads: 0,
+        date: '2024-02-15'
+    },
     // Add more items as needed
 ];
 
