@@ -120,14 +120,6 @@ const galleryItems = [
         downloads: 0,
         date: '2024-02-15'
     },
-    {
-        id: 15,
-        title: 'LKMT III',
-        category: 'activities',
-        imageUrl: 'Kegiatan/LKMTIII.jpg',
-        downloads: 0,
-        date: '2024-02-15'
-    },
     // Add more items as needed
 ];
 
