@@ -1,18 +1,39 @@
 /* Custom styles */
 .hero-slider {
-    background-image: url('Kegiatan/FamilyGathering.jpg');
+    position: relative;
+    width: 100%;
+    height: 400px; /* Adjust height as needed */
+    overflow: hidden;
+}
+
+.hero-slider .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
     background-size: cover;
     background-position: center;
-    /* animation: slideShow 20s infinite; */
+    opacity: 0;
+    animation: slideShow 9s infinite steps(1);
+}
+
+.hero-slider .slide:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.hero-slider .slide:nth-child(2) {
+    animation-delay: 3s;
+}
+
+.hero-slider .slide:nth-child(3) {
+    animation-delay: 6s;
 }
 
 @keyframes slideShow {
-    0%, 100% { opacity: 1; }
-    45% { opacity: 1; }
-    50% { opacity: 0; }
-    95% { opacity: 0; }
+    0%, 33.33% { opacity: 1; }
+    33.33%, 100% { opacity: 0; }
 }
 
+/* ------------------------------------ */
 .gallery-item {
     transition: transform 0.3s ease;
 }
@@ -38,10 +59,6 @@
     top: 0;
 }
 
-
-
-
-
 /* Style untuk menu navigasi */
 .nav-menu {
     display: none;
@@ -52,15 +69,15 @@
     background-color: white;
     padding: 0.5rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Ketika menu aktif */
-  .nav-menu.active {
+}
+
+/* Ketika menu aktif */
+.nav-menu.active {
     display: block;
-  }
-  
-  /* Media query untuk desktop */
-  @media (min-width: 768px) {
+}
+
+/* Media query untuk desktop */
+@media (min-width: 768px) {
     .nav-menu {
         position: static;
         display: flex;
@@ -71,15 +88,15 @@
     #hamburger-button {
         display: none;
     }
-  }
-  
-  /* Animasi untuk menu */
-  .nav-menu {
+}
+
+/* Animasi untuk menu */
+.nav-menu {
     transition: all 0.3s ease-in-out;
-  }
-  
-  /* Hover efek untuk link */
-  .nav-menu a:hover {
+}
+
+/* Hover efek untuk link */
+.nav-menu a:hover {
     background-color: #f3f4f6;
     border-radius: 0.25rem;
-  }
+}
