@@ -51,10 +51,22 @@ body {
   background: #000000;
 }
 
+/* Animasi */
+.scale-0 {
+  transform: scale(0);
+}
 
+.scale-100 {
+  transform: scale(1);
+}
 
+.member-item {
+  transition: transform 0.3s ease;
+}
 
-
+.member-item:hover {
+  transform: scale(1.02);
+}
 
 
 /* Style untuk menu navigasi */
