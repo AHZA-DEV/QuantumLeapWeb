@@ -69,11 +69,12 @@
                                 Komunitas Mahasiswa Pendidikan Teknologi Informasi 2023 yang Berdedikasi untuk Kemajuan
                                 Teknologi dan Pendidikan
                             </p>
-                            <div class="mt-10">                                <a href="https://www.instagram.com/quantumleap_23/" target="_blank"
+                            <div class="mt-10"> <a href="https://www.instagram.com/quantumleap_23/" target="_blank"
                                     class="text-custom hover:text-gray-900">
                                     <button
                                         class="bg-slate-200 text-gray-950 hover:bg-slate-400 text-custom px-8 py-3 mr-4 text-base font-medium inline-flex items-center rounded-lg">
-                                        kunjungi instagram <span class=""></span> <i class="fab fa-instagram text-2xl ml-2"></i>
+                                        kunjungi instagram <span class=""></span> <i
+                                            class="fab fa-instagram text-2xl ml-2"></i>
                                     </button>
                                 </a>
                                 <a href="https://www.tiktok.com/@quantumleap_23?_t=ZS-8suYuVdOCbU&_r=1" target="_blank"
@@ -153,7 +154,8 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center">
                     <h2 class="text-3xl font-bold text-gray-900">Galeri Kegiatan</h2>
-                    <p class="mt-4 text-lg text-gray-600">Dokumentasi kegiatan dan momen berharga komunitas Quantum Leap 23
+                    <p class="mt-4 text-lg text-gray-600">Dokumentasi kegiatan dan momen berharga komunitas Quantum Leap
+                        23
                     </p>
                 </div>
 
@@ -421,39 +423,134 @@
         -->
 
         <!-- Members Section -->
-        <section id="anggota" class="py-24 bg-white">
+        <section id="anggota" class="py-40">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h2 class="text-6xl font-bold text-gray-100">Anggota Komunitas</h2>
+                    <p class="mt-4 text-lg text-gray-200">Tim kami yang berdedikasi untuk kemajuan Quantum Leap 23</p>
+                </div>
+                <div class="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-5">
+                    <div class="bg-gray-50 p-6 rounded-lg text-center hover:shadow-lg transition-shadow duration-300 cursor-pointer member-item" onclick="openModal('modalFajar')">
+                        <img src="/galery/Fajar.jpg" alt="Ketua" class="w-32 h-32 mx-auto rounded-full object-cover">
+                        <h3 class="mt-6 text-lg font-medium text-gray-900">M. Fajar Affan</h3>
+                        <p class="text-custom">Ketua Leting</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg text-center hover:shadow-lg transition-shadow duration-300 cursor-pointer member-item" onclick="openModal('modalMahfoud')">
+                        <img src="/galery/MAHFUD.JPG" alt="Wakil Ketua" class="w-32 h-32 mx-auto rounded-full object-cover">
+                        <h3 class="mt-6 text-lg font-medium text-gray-900">Ruhul Mahfoud</h3>
+                        <p class="text-custom">Wakil Ketua 1</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg text-center hover:shadow-lg transition-shadow duration-300 cursor-pointer member-item" onclick="openModal('modalRamadi')">
+                        <img src="/galery/RAMADI.jpg" alt="Sekretaris" class="w-32 h-32 mx-auto rounded-full object-cover">
+                        <h3 class="mt-6 text-lg font-medium text-gray-900">Ramadi Al Fitra</h3>
+                        <p class="text-custom">Wakil Ketua 2</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg text-center hover:shadow-lg transition-shadow duration-300 cursor-pointer member-item" onclick="openModal('modalAlfia')">
+                        <img src="/galery/Alfia.jpg" alt="Bendahara" class="w-32 h-32 mx-auto rounded-full object-cover">
+                        <h3 class="mt-6 text-lg font-medium text-gray-900">Alfia Malisa</h3>
+                        <p class="text-custom">Bendahara</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg text-center hover:shadow-lg transition-shadow duration-300 cursor-pointer member-item" onclick="openModal('modalVera')">
+                        <img src="/galery/VERA.jpg" alt="Sekretaris" class="w-32 h-32 mx-auto rounded-full object-cover">
+                        <h3 class="mt-6 text-lg font-medium text-gray-900">Vera Riska</h3>
+                        <p class="text-custom">Sekretaris</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal HTML -->
+        <div id="modalFajar" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+            <div class="bg-white p-8 rounded-lg max-w-lg w-full transform transition-transform duration-300 scale-0">
+                <img src="/galery/Fajar.jpg" alt="Ketua" class="w-52 h-52 mx-auto object-cover aspect-square mb-4">
+                <h2 class="text-2xl font-bold mb-4">M. Fajar Affan</h2>
+                <p>Ketua Leting</p>
+                <button class="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
+                    onclick="closeModal('modalFajar')">Close</button>
+            </div>
+        </div>
+
+        <div id="modalMahfoud" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+            <div class="bg-white p-8 rounded-lg max-w-lg w-full transform transition-transform duration-300 scale-0">
+                <img src="/galery/MAHFUD.JPG" alt="Wakil Ketua"
+                    class="w-52 h-52 mx-auto object-cover aspect-square mb-4">
+                <h2 class="text-2xl font-bold mb-4">Ruhul Mahfoud</h2>
+                <p>Wakil Ketua 1</p>
+                <button class="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
+                    onclick="closeModal('modalMahfoud')">Close</button>
+            </div>
+        </div>
+
+        <div id="modalRamadi" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+            <div class="bg-white p-8 rounded-lg max-w-lg w-full transform transition-transform duration-300 scale-0">
+                <img src="/galery/RAMADI.jpg" alt="Sekretaris"
+                    class="w-52 h-52 mx-auto object-cover aspect-square mb-4">
+                <h2 class="text-2xl font-bold mb-4">Ramadi Al Fitra</h2>
+                <p>Wakil Ketua 2</p>
+                <button class="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
+                    onclick="closeModal('modalRamadi')">Close</button>
+            </div>
+        </div>
+
+        <div id="modalAlfia" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+            <div class="bg-white p-8 rounded-lg max-w-lg w-full transform transition-transform duration-300 scale-0">
+                <img src="/galery/Alfia.jpg" alt="Bendahara" class="w-52 h-52 mx-auto object-cover aspect-square mb-4">
+                <h2 class="text-2xl font-bold mb-4">Alfia Malisa</h2>
+                <p>Bendahara</p>
+                <button class="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
+                    onclick="closeModal('modalAlfia')">Close</button>
+            </div>
+        </div>
+
+        <div id="modalVera" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+            <div class="bg-white p-8 rounded-lg max-w-lg w-full transform transition-transform duration-300 scale-0">
+                <img src="/galery/VERA.jpg" alt="Sekretaris" class="w-52 h-52 mx-auto object-cover aspect-square mb-4">
+                <h2 class="text-2xl font-bold mb-4">Vera Riska</h2>
+                <p>Sekretaris</p>
+                <button class="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
+                    onclick="closeModal('modalVera')">Close</button>
+            </div>
+        </div>
+
+        <!-- <section id="anggota" class="py-24 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center">
                     <h2 class="text-3xl font-bold text-gray-900">Anggota Komunitas</h2>
                     <p class="mt-4 text-lg text-gray-600">Tim kami yang berdedikasi untuk kemajuan Quantum Leap 23</p>
                 </div>
                 <div class="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-                    <div class="bg-gray-50 p-6 rounded-lg text-center">
-                        <img src="/Fajar.jpg" alt="Ketua" class="w-32 h-32 mx-auto rounded-full object-cover">
+                    <div class="bg-gray-50 p-6 rounded-lg text-center hover:shadow-lg transition-shadow duration-300">
+                        <img src="/galery/Fajar.jpg" alt="Ketua" class="w-32 h-32 mx-auto rounded-full object-cover">
                         <h3 class="mt-6 text-lg font-medium text-gray-900">M. Fajar Affan</h3>
                         <p class="text-custom">Ketua Leting</p>
                     </div>
-                    <div class="bg-gray-50 p-6 rounded-lg text-center">
-                        <img src="/MAHFUD.JPG" alt="Wakil Ketua"
+                    <div class="bg-gray-50 p-6 rounded-lg text-center hover:shadow-lg transition-shadow duration-300">
+                        <img src="/galery/MAHFUD.JPG" alt="Wakil Ketua"
                             class="w-32 h-32 mx-auto rounded-full object-cover">
                         <h3 class="mt-6 text-lg font-medium text-gray-900">Ruhul Mahfoud</h3>
                         <p class="text-custom">Wakil Ketua 1</p>
                     </div>
-                    <div class="bg-gray-50 p-6 rounded-lg text-center">
-                        <img src="/RAMADI.jpg" alt="Sekretaris"
+                    <div class="bg-gray-50 p-6 rounded-lg text-center hover:shadow-lg transition-shadow duration-300">
+                        <img src="/galery/RAMADI.jpg" alt="Sekretaris"
                             class="w-32 h-32 mx-auto rounded-full object-cover">
                         <h3 class="mt-6 text-lg font-medium text-gray-900">Ramadi Al Fitra</h3>
                         <p class="text-custom">Wakil Ketua 2</p>
                     </div>
-                    <div class="bg-gray-50 p-6 rounded-lg text-center">
-                        <img src="/Alfia.jpg" alt="Bendahara"
+                    <div class="bg-gray-50 p-6 rounded-lg text-center hover:shadow-lg transition-shadow duration-300">
+                        <img src="/galery/Alfia.jpg" alt="Bendahara"
                             class="w-32 h-32 mx-auto rounded-full object-cover">
                         <h3 class="mt-6 text-lg font-medium text-gray-900">Alfia Malisa</h3>
                         <p class="text-custom">Bendahara</p>
                     </div>
+                    <div class="bg-gray-50 p-6 rounded-lg text-center hover:shadow-lg transition-shadow duration-300">
+                        <img src="/galery/VERA.jpg" alt="Sekretaris"
+                            class="w-32 h-32 mx-auto rounded-full object-cover">
+                        <h3 class="mt-6 text-lg font-medium text-gray-900">Vera Riska</h3>
+                        <p class="text-custom">Sekretaris</p>
+                    </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <!-- Programs Section -->
         <!-- <section id="program" class="py-24 bg-gray-50">
