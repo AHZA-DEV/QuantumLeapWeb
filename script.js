@@ -86,3 +86,26 @@ function hideCustomAlert() {
     const alertBox = document.getElementById('custom-alert');
     alertBox.classList.add('hidden'); // Menyembunyikan alert
 }
+
+
+
+
+// Modal JavaScript untuk membuka dan menutup modal
+    function openModal(modalId) {
+        const modal = document.getElementById(modalId);
+        modal.classList.remove('hidden');
+        setTimeout(() => {
+            modal.querySelector('.transform').classList.remove('scale-0');
+            modal.querySelector('.transform').classList.add('scale-100');
+        }, 100);
+    }
+
+//untuk menutup modal
+    function closeModal(modalId) {
+        const modal = document.getElementById(modalId);
+        modal.querySelector('.transform').classList.remove('scale-100');
+        modal.querySelector('.transform').classList.add('scale-0');
+        setTimeout(() => {
+            modal.classList.add('hidden');
+        }, 300);
+    }
