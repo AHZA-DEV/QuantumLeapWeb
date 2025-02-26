@@ -91,21 +91,42 @@ function hideCustomAlert() {
 
 
 // Modal JavaScript untuk membuka dan menutup modal
-    function openModal(modalId) {
-        const modal = document.getElementById(modalId);
-        modal.classList.remove('hidden');
-        setTimeout(() => {
-            modal.querySelector('.transform').classList.remove('scale-0');
-            modal.querySelector('.transform').classList.add('scale-100');
-        }, 100);
-    }
+function openModal(modalId) {
+    const modal = document.getElementById(modalId);
+    modal.classList.remove('hidden');
+    setTimeout(() => {
+        modal.querySelector('.transform').classList.remove('scale-0');
+        modal.querySelector('.transform').classList.add('scale-100');
+    }, 100);
+}
 
 //untuk menutup modal
-    function closeModal(modalId) {
-        const modal = document.getElementById(modalId);
-        modal.querySelector('.transform').classList.remove('scale-100');
-        modal.querySelector('.transform').classList.add('scale-0');
-        setTimeout(() => {
-            modal.classList.add('hidden');
-        }, 300);
-    }
+function closeModal(modalId) {
+    const modal = document.getElementById(modalId);
+    modal.querySelector('.transform').classList.remove('scale-100');
+    modal.querySelector('.transform').classList.add('scale-0');
+    setTimeout(() => {
+        modal.classList.add('hidden');
+    }, 300);
+}
+
+
+// Tambahkan event listener untuk form kontak
+document.getElementById("contactForm").addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    let nama = document.getElementById("nama").value;
+    let pesan = document.getElementById("pesan").value;
+    let nomorWA = "6282267885262"; // Ganti dengan nomor WhatsApp tujuan
+
+    let teksPesan = `Halo, saya ${nama}%0A%0A${pesan}`;
+
+    let linkWA = `https://wa.me/${nomorWA}?text=${teksPesan}`;
+    window.open(linkWA, "_blank");
+});
+
+
+
+
+
+
