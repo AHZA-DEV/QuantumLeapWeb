@@ -27,16 +27,17 @@ body {
 }
 
 
+/* ----------------------------------------------- */
 
 
-
-
+/* Style untuk swiper */
 .swiper {
   width: 100%;
   padding-top: 20px;
   padding-bottom: 50px;
 }
 
+/* Style untuk slide */
 .swiper-slide {
   background-position: center;
   background-size: cover;
@@ -74,8 +75,10 @@ body {
   display: none;
   position: absolute;
   top: 100%;
-  right: 0; /* Changed from left: 0 to right: 0 */
-  width: 200px; /* Added fixed width for dropdown */
+  right: 0;
+  /* Changed from left: 0 to right: 0 */
+  width: 200px;
+  /* Added fixed width for dropdown */
   background-color: white;
   padding: 0.5rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -89,14 +92,15 @@ body {
 /* Media query untuk desktop */
 @media (min-width: 768px) {
   .nav-menu {
-      position: static;
-      display: flex;
-      width: auto;
-      box-shadow: none;
-      padding: 0;
+    position: static;
+    display: flex;
+    width: auto;
+    box-shadow: none;
+    padding: 0;
   }
+
   #hamburger-button {
-      display: none;
+    display: none;
   }
 }
 
@@ -109,4 +113,13 @@ body {
 .nav-menu a:hover {
   background-color: #f3f4f6;
   border-radius: 0.25rem;
+}
+
+
+/* Animasi loading */
+.spinner {
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: #4CAF50;
 }
