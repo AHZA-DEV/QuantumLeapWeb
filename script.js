@@ -114,29 +114,23 @@ function closeModal(modalId) {
 // Tambahkan event listener untuk form kontak
 // Tambahkan event listener untuk form kontak
 document.getElementById("contactForm").addEventListener("submit", function (event) {
-    event.preventDefault();
+    event.preventDefault(); // Mencegah form melakukan reload halaman
 
-    // Ambil nilai dari inputan form
+    // Ambil nilai input dari form
     let nama = document.getElementById("nama").value.trim();
     let pesan = document.getElementById("pesan").value.trim();
     let nomorWA = "6282267885262"; // Ganti dengan nomor WhatsApp tujuan
 
-    // Validasi input agar tidak kosong
+    // Validasi agar nama dan pesan tidak kosong
     if (nama === "" || pesan === "") {
-        alert("Harap isi semua kolom sebelum mengirim pesan!");
+        alert("Harap isi nama dan pesan sebelum mengirim!");
         return;
     }
 
     // Format pesan WhatsApp dengan encoding
-    let teksPesan = `Halo, saya ${nama}%0A%0A${pesan}`;
-    let linkWA = `https://wa.me/${nomorWA}?text=${encodeURIComponent(`Halo, saya ${nama}\n\n${pesan}`)}`;
+    let teksPesan = `Halo, saya ${nama}.\n\n${pesan}`;
+    let linkWA = `https://wa.me/${nomorWA}?text=${encodeURIComponent(teksPesan)}`;
 
     // Buka WhatsApp di tab baru
     window.open(linkWA, "_blank");
 });
-
-
-
-
-
-
