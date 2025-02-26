@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quantum Leap - PTI 23</title>
+    <link rel="icon" href="logo.png" type="image/png">
+
 
     <link rel="stylesheet" href="project/galeri.css">
     <!-- Fonts -->
@@ -17,9 +19,11 @@
 </head>
 
 <body class="bg-gray-950">
+
+
     <!-- Header -->
     <!-- index.html -->
-    <header class="fixed w-full bg-white shadow-sm z-50">
+    <header id="header" class="fixed w-full bg-white shadow-sm z-50">
         <nav class="max-w-7xl mx-auto px-4">
             <div class="flex justify-between items-center h-16">
                 <!-- Teks Quantum Leap -->
@@ -55,7 +59,7 @@
     </header>
 
 
-    <main>
+    <main id="main">
         <!-- Hero Section -->
         <section id="beranda" class="pt-16">
             <div class="relative custom-color">
@@ -391,6 +395,7 @@
             </div>
         </section>
 
+        <!-- kosong -->
         <!-- 
         <section id="galeri" class="py-24 bg-gray-50">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -672,72 +677,29 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="kontak" class="py-24 bg-gray-50">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
-                    <div>
-                        <h2 class="text-3xl font-bold text-gray-900">Hubungi Kami</h2>
-                        <p class="mt-4 text-lg text-gray-600">
-                            Kami senang mendengar dari Anda. Kirimkan pesan atau temukan kami di media sosial.
-                        </p>
-                        <div class="mt-8 space-y-6">
-                            <!-- <div class="flex items-center">
-                                <i class="fas fa-envelope text-custom w-6"></i>
-                                <span class="ml-4 text-gray-600">quantumleap@email.com</span>
-                            </div> -->
-                            <div class="flex items-center">
-                                <i class="fas fa-phone text-custom w-6"></i>
-                                <span class="ml-4 text-gray-600"><a href="https://wa.me/6282267885262" target="_blank" class="text-custom hover:text-blue-600">+6281234567890</a></span>
-                            </div>
-                            <!-- <div class="flex items-center">
-                                <i class="fas fa-map-marker-alt text-custom w-6"></i>
-                                <span class="ml-4 text-gray-600">Kampus PTI, Gedung A Lantai 3</span>
-                            </div> -->
-                        </div>
-                        <!-- MEDSOS -->
-                        <!-- <div class="mt-8 flex space-x-6">
-                            <a href="#" class="text-custom hover:text-gray-900">
-                                <i class="fab fa-instagram text-2xl"></i>
-                            </a>
-                            <a href="#" class="text-custom hover:text-gray-900">
-                                <i class="fab fa-twitter text-2xl"></i>
-                            </a>
-                            <a href="#" class="text-custom hover:text-gray-900">
-                                <i class="fab fa-tiktok text-2xl"></i>
-                            </a>
-                            <a href="#" class="text-custom hover:text-gray-900">
-                                <i class="fab fa-youtube text-2xl"></i>
-                            </a>
-                        </div> -->
-                    </div>
-                    <!-- <form class="space-y-6">
-                        <div>
-                            <label for="nama" class="block text-sm font-medium text-gray-700">Nama Lengkap</label>
-                            <input type="text" id="nama" name="nama"
-                                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-custom focus:ring-custom">
-                        </div>
-                        <div>
-                            <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-                            <input type="email" id="email" name="email"
-                                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-custom focus:ring-custom">
-                        </div>
-                        <div>
-                            <label for="pesan" class="block text-sm font-medium text-gray-700">Pesan</label>
-                            <textarea id="pesan" name="pesan" rows="4"
-                                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-custom focus:ring-custom"></textarea>
-                        </div>
-                        <button type="submit"
-                            class="w-full bg-custom text-white px-4 py-2 text-sm font-medium rounded-lg hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-custom">
-                            Kirim Pesan
-                        </button>
-                    </form> -->
-                </div>
+        <!-- Contact Form -->
+        <section id="kontak" class="flex items-center justify-center py-20">
+            <div class="bg-white p-8 rounded-lg shadow-lg w-96">
+                <h2 class="text-2xl font-semibold mb-6 text-center"> <i class="fas fa-phone text-custom w-6"></i>
+                    Hubungi Kami</h2>
+                <form id="contactForm">
+                    <input type="text" id="nama" placeholder="Nama Anda" required
+                        class="w-full p-3 mb-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+                    <textarea id="pesan" placeholder="Pesan Anda" required
+                        class="w-full p-3 mb-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"></textarea>
+                    <button type="submit"
+                        class="w-full bg-green-500 text-white py-3 rounded-md hover:bg-green-600 transition duration-300">
+                        Kirim via WhatsApp
+                    </button>
+                </form>
             </div>
         </section>
+
+
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-900">
+    <footer id="footer" class="bg-gray-900">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div>
@@ -769,7 +731,8 @@
                     <ul class="space-y-2 text-gray-400">
                         <li><a href="mailto:quantumleap@email.com" class="hover:text-white">quantumleap@email.com</a>
                         </li>
-                        <li><a href="https://wa.me/6282267885262" target="_blank" class="hover:text-white">+6281234567890</a></li>
+                        <li><a href="#kontak" class="hover:text-white">+62812 3456
+                                7890</a></li>
                         <!-- <li>Kampus PTI, Gedung A Lantai 3</li> -->
                     </ul>
                 </div>
@@ -782,7 +745,7 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+
 
 </body>
 
