@@ -11,9 +11,9 @@
     <link rel="stylesheet" href="galeri.css">
 </head>
 
-<body class="bg-gray-100">
+<body class="bg-gray-100 light">
     <!-- Header -->
-    <header class="fixed w-full bg-white shadow-md z-50">
+    <header class="fixed w-full bg-white shadow-md z-50" id="main-header">
         <nav class="container mx-auto px-6 py-3">
             <div class="flex items-center justify-between">
                 <div class="flex items-center">
@@ -29,6 +29,16 @@
                         class="block md:inline-block px-4 py-2 text-gray-700 hover:text-gray-900">Kontak</a>
                     <a href="/index.html"
                         class="block md:inline-block px-4 py-2 hover:bg-gray-600 text-gray-700 hover:text-gray-900">Kembali</a>
+                    
+                    <div class="flex items-center">
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="darkModeToggle">
+                            <span class="toggle-slider">
+                                <i class="fas fa-sun sun-icon"></i>
+                                <i class="fas fa-moon moon-icon"></i>
+                            </span>
+                        </label>
+                    </div>
                 </div>
 
                 <!-- <div id="nav-menu" class="hidden md:flex items-center space-x-8">
@@ -77,7 +87,7 @@
             <div class="max-w-md mx-auto">
                 <div class="relative">
                     <input type="text" id="search" placeholder="Search photos..."
-                        class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-600">
+                        class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-600 search-input">
                     <button class="absolute right-3 top-2">
                         <i class="fas fa-search text-gray-400"></i>
                     </button>
@@ -92,12 +102,11 @@
             <h2 class="text-3xl font-bold text-center mb-8">Our Gallery</h2>
 
             <!-- Filter Buttons -->
-            <!-- <div class="flex flex-wrap justify-center gap-4 mb-8">
+            <div class="flex flex-wrap justify-center gap-4 mb-8">
                 <button class="filter-btn active px-4 py-2 rounded-full bg-indigo-600 text-white" data-category="all">All</button>
                 <button class="filter-btn px-4 py-2 rounded-full bg-gray-200 hover:bg-indigo-600 hover:text-white" data-category="events">Events</button>
-                <button class="filter-btn px-4 py-2 rounded-full bg-gray-200 hover:bg-indigo-600 hover:text-white" data-category="members">Members</button>
                 <button class="filter-btn px-4 py-2 rounded-full bg-gray-200 hover:bg-indigo-600 hover:text-white" data-category="activities">Activities</button>
-            </div> -->
+            </div>
 
             <!-- Gallery Grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="gallery-grid">
