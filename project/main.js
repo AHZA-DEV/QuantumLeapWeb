@@ -312,20 +312,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const navMenu = document.getElementById('nav-menu');
     const darkModeToggle = document.getElementById('darkModeToggle');
     
-    // Check for saved dark mode preference or use user's system preference
-    const prefersDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const savedDarkMode = localStorage.getItem('darkMode');
-    
-    // Apply dark mode if saved or system prefers it
-    if (savedDarkMode === 'enabled' || (savedDarkMode === null && prefersDarkMode)) {
-        document.body.classList.add('dark');
-        darkModeToggle.checked = true;
-        adjustHeaderForDarkMode(true);
-    } else {
-        document.body.classList.add('light');
-        darkModeToggle.checked = false;
-        adjustHeaderForDarkMode(false);
-    }
     
     // Function to adjust header background for dark mode
     function adjustHeaderForDarkMode(isDark) {
