@@ -3,7 +3,7 @@
 
 1. **Clone repository**:
     ```sh
-    git clone <repository-url>
+    git clone https://github.com/AHZA-DEV/QuantumLeapWeb.git
     cd QuantumLeapWeb
     ```
 
