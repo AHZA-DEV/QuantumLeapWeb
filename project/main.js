@@ -165,6 +165,10 @@ function initializeGallery() {
 function createGalleryItem(item) {
     const div = document.createElement('div');
     div.className = 'gallery-item bg-white rounded-lg shadow-md overflow-hidden';
+    // Add data attributes for filtering
+    div.setAttribute('data-category', item.category);
+    div.setAttribute('data-id', item.id);
+    
     div.innerHTML = `
         <a href="${item.imageUrl}" data-lightbox="gallery" data-title="${item.title}">
             <img src="${item.imageUrl}" alt="${item.title}" class="w-full h-64 object-cover">
@@ -174,7 +178,7 @@ function createGalleryItem(item) {
             <div class="flex justify-between items-center">
                 <span class="text-sm text-gray-500">${item.date}</span>
                 <div class="flex items-center space-x-2">
-                    <span class="text-sm text-gray-500">${item.downloads} downloads</span>
+                    <span class="text-sm text-gray-500 download-count">${item.downloads} downloads</span>
                     <button onclick="downloadImage('${item.imageUrl}', ${item.id})" 
                             class="px-3 py-1 bg-indigo-600 text-white rounded-md hover:bg-indigo-700">
                         <i class="fas fa-download"></i>
@@ -225,17 +229,22 @@ function filterGallery(category) {
 // Download image function
 async function downloadImage(url, id) {
     try {
+        // Use relative path for images
         const response = await fetch(url);
         const blob = await response.blob();
         const downloadUrl = window.URL.createObjectURL(blob);
         const link = document.createElement('a');
         link.href = downloadUrl;
-        link.download = `quantum-leap-${id}.jpg`;
+        
+        // Extract filename from the URL path
+        const filename = url.split('/').pop();
+        link.download = filename || `quantum-leap-${id}.jpg`;
+        
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
         window.URL.revokeObjectURL(downloadUrl);
-        
+
         // Update download counter
         const item = galleryItems.find(item => item.id === id);
         if (item) {
@@ -259,11 +268,11 @@ function updateDownloadCounter(id, count) {
 document.getElementById('search').addEventListener('input', (e) => {
     const searchTerm = e.target.value.toLowerCase();
     const items = document.querySelectorAll('.gallery-item');
-    
+
     items.forEach(item => {
         const title = item.querySelector('h3').textContent.toLowerCase();
         const date = item.querySelector('.text-gray-500').textContent.toLowerCase();
-        
+
         if (title.includes(searchTerm) || date.includes(searchTerm)) {
             item.style.display = 'block';
         } else {
@@ -285,7 +294,7 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
 document.addEventListener('DOMContentLoaded', () => {
     initializeGallery();
     initializeAlbums();
-    
+
     // Initialize lightbox
     lightbox.option({
         'resizeDuration': 200,
@@ -301,6 +310,52 @@ document.addEventListener('DOMContentLoaded', function () {
     // Ambil elemen yang diperlukan
     const hamburgerButton = document.getElementById('hamburger-button');
     const navMenu = document.getElementById('nav-menu');
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    
+    // Check for saved dark mode preference or use user's system preference
+    const prefersDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const savedDarkMode = localStorage.getItem('darkMode');
+    
+    // Apply dark mode if saved or system prefers it
+    if (savedDarkMode === 'enabled' || (savedDarkMode === null && prefersDarkMode)) {
+        document.body.classList.add('dark');
+        darkModeToggle.checked = true;
+        adjustHeaderForDarkMode(true);
+    } else {
+        document.body.classList.add('light');
+        darkModeToggle.checked = false;
+        adjustHeaderForDarkMode(false);
+    }
+    
+    // Function to adjust header background for dark mode
+    function adjustHeaderForDarkMode(isDark) {
+        const header = document.getElementById('main-header');
+        if (isDark) {
+            header.classList.remove('bg-white');
+            header.classList.add('bg-gray-900');
+        } else {
+            header.classList.remove('bg-gray-900');
+            header.classList.add('bg-white');
+        }
+    }
+    
+    // Dark mode toggle function
+    function toggleDarkMode() {
+        if (darkModeToggle.checked) {
+            document.body.classList.remove('light');
+            document.body.classList.add('dark');
+            localStorage.setItem('darkMode', 'enabled');
+            adjustHeaderForDarkMode(true);
+        } else {
+            document.body.classList.remove('dark');
+            document.body.classList.add('light');
+            localStorage.setItem('darkMode', 'disabled');
+            adjustHeaderForDarkMode(false);
+        }
+    }
+    
+    // Listen for toggle click
+    darkModeToggle.addEventListener('change', toggleDarkMode);
 
     // Toggle menu saat hamburger diklik
     hamburgerButton.addEventListener('click', function (e) {
