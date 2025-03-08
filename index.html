@@ -7,7 +7,7 @@
     <title>Quantum Leap - PTI 23</title>
     <link rel="icon" href="logo.png" type="image/png">
 
-
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="project/galeri.css">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -18,37 +18,45 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
 </head>
 
-<body class="bg-gray-950">
+<body>
 
 
     <!-- Header -->
     <!-- index.html -->
-    <header id="header" class="fixed w-full bg-white shadow-sm z-50">
+    <header id="header" class="fixed w-full shadow-lg z-50">
         <nav class="max-w-7xl mx-auto px-4">
             <div class="flex justify-between items-center h-16">
                 <!-- Teks Quantum Leap -->
-                <div class="text-xl font-bold text-gray-800">
-                    Quantum Leap 23
+                <div class="text-xl font-bold text-custom">
+                    <span class="hover:text-white transition-all duration-300">Quantum Leap 23</span>
                 </div>
 
                 <!-- Navigation Links -->
-                <div id="nav-menu" class="nav-menu md:flex md:items-center hidden">
+                <div id="nav-menu" class="nav-menu bg-black md:flex md:items-center hidden">
                     <a href="#beranda"
-                        class="block md:inline-block px-4 py-2 text-gray-700 hover:text-gray-900">Beranda</a>
-                    <a href="#tentang" class="block md:inline-block px-4 py-2 text-gray-700 hover:text-gray-900">Tentang
+                        class="block md:inline-block px-4 py-2 nav-link">Beranda</a>
+                    <a href="#tentang" class="block md:inline-block px-4 py-2 nav-link">Tentang
                         Kami</a>
                     <a href="#galeri"
-                        class="block md:inline-block px-4 py-2 text-gray-700 hover:text-gray-900">Galeri</a>
+                        class="block md:inline-block px-4 py-2 nav-link">Galeri</a>
                     <a href="#anggota"
-                        class="block md:inline-block px-4 py-2 text-gray-700 hover:text-gray-900">Anggota</a>
-                    <a href="#blog" class="block md:inline-block px-4 py-2 text-gray-700 hover:text-gray-900">Blog</a>
+                        class="block md:inline-block px-4 py-2 nav-link">Anggota</a>
+                    <a href="#blog" class="block md:inline-block px-4 py-2 nav-link">Blog</a>
                     <a href="#kontak"
-                        class="block md:inline-block px-4 py-2 text-gray-700 hover:text-gray-900">Kontak</a>
+                        class="block md:inline-block px-4 py-2 nav-link">Kontak</a>
+                    <!-- Theme Toggle Button -->
+                    <div class="ml-4 flex items-center">
+                        <div id="theme-toggle" class="theme-switcher" aria-label="Toggle theme">
+                            <div class="switcher-thumb">
+                                <i class="fas fa-moon theme-icon"></i>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Hamburger Button -->
                 <button id="hamburger-button"
-                    class="md:hidden text-gray-500 hover:text-gray-700 focus:outline-none ml-4">
+                    class="md:hidden text-custom hover:text-white focus:outline-none ml-4 transition-colors duration-300">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M4 6h16M4 12h16M4 18h16"></path>
@@ -61,48 +69,38 @@
 
     <main id="main">
         <!-- Hero Section -->
-        <section id="beranda" class="pt-16">
-            <div class="relative custom-color">
+        <section id="beranda" class="pt-16 animate-on-scroll">
+            <div class="relative hero-gradient">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:flex lg:items-center py-24">
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <div class="text-white">
                             <h1 class="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
-                                Selamat Datang di Quantum Leap 23
+                                Selamat Datang di <span class="text-custom">Quantum Leap 23</span>
                             </h1>
-                            <p class="mt-6 text-xl">
+                            <p class="mt-6 text-xl text-gray-300">
                                 Komunitas Mahasiswa Pendidikan Teknologi Informasi 2023 yang Berdedikasi untuk Kemajuan
                                 Teknologi dan Pendidikan
                             </p>
-                            <div class="mt-10"> <a href="https://www.instagram.com/quantumleap_23/" target="_blank"
-                                    class="text-custom hover:text-gray-900">
+                            <div class="mt-10 space-y-4 sm:space-y-0 sm:space-x-4 flex flex-col sm:flex-row"> 
+                                <a href="https://www.instagram.com/quantumleap_23/" target="_blank"
+                                    class="transition-all duration-300 transform hover:scale-105">
                                     <button
-                                        class="bg-slate-200 text-gray-950 hover:bg-slate-400 text-custom px-8 py-3 mr-4 text-base font-medium inline-flex items-center rounded-lg">
-                                        kunjungi instagram <span class=""></span> <i
+                                        class="bg-gradient-to-r from-purple-600 to-indigo-600 light-mode-btn text-white px-8 py-3 text-base font-medium inline-flex items-center rounded-lg shadow-lg shadow-purple-500/30">
+                                        Kunjungi Instagram <i
                                             class="fab fa-instagram text-2xl ml-2"></i>
                                     </button>
                                 </a>
                                 <a href="https://www.tiktok.com/@quantumleap_23?_t=ZS-8suYuVdOCbU&_r=1" target="_blank"
-                                    class="text-custom hover:text-gray-900">
+                                    class="transition-all duration-300 transform hover:scale-105">
                                     <button
-                                        class="bg-slate-200 text-gray-950 hover:bg-slate-400 text-custom mt-2 px-12 py-3 mr-4 text-base font-medium inline-flex items-center rounded-lg">
-                                        kunjungi Tiktok <i class="fab fa-tiktok text-2xl ml-2"></i>
+                                        class="bg-gradient-to-r from-indigo-600 to-blue-600 light-mode-btn text-white px-8 py-3 text-base font-medium inline-flex items-center rounded-lg shadow-lg shadow-indigo-500/30">
+                                        Kunjungi Tiktok <i class="fab fa-tiktok text-2xl ml-2"></i>
                                     </button>
                                 </a>
-
-
-                                <!-- <button
-                                    class="bg-slate-200 hover:bg-slate-400 text-custom px-8 py-3 text-base font-medium inline-flex items-center rounded-lg">
-                                    Pelajari Lebih Lanjut
-                                </button> -->
-                                <!-- <a href="#tentang"
-                                    class="bg-slate-200 hover:bg-slate-400 text-custom px-8 py-3 text-base font-medium inline-flex items-center rounded-lg hover:bg-gray-50">
-                                    Pelajari Lebih Lanjut
-                                    <i class="fas fa-arrow-right ml-2"></i>
-                                </a> -->
                             </div>
                         </div>
-                        <div class="">
-                            <img src="logo.png" alt="Hero Image" class="w-96 object-cover rounded-lg">
+                        <div class="flex justify-center">
+                            <img src="logo.png" alt="Hero Image" class="w-96 object-cover rounded-lg glow-effect transition-all duration-500 hover:scale-105 hero-image">
                         </div>
                     </div>
                 </div>
@@ -110,46 +108,47 @@
         </section>
 
         <!-- About Section -->
-        <section id="tentang" class="py-24 bg-white">
+        <section id="tentang" class="py-24 bg-gradient-to-b from-[#121212] to-[#1a1a1a] animate-on-scroll">
+            <div class="parallax-bg" data-speed="0.1"></div>
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center">
-                    <h2 class="text-3xl font-bold text-gray-900">Tentang Kami</h2>
-                    <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+                    <h2 class="text-3xl font-bold text-white"><span class="text-custom">Tentang</span> Kami</h2>
+                    <p class="mt-4 text-lg text-gray-300 max-w-3xl mx-auto">
                         Quantum Leap adalah komunitas mahasiswa PTI angkatan 2023 yang berkomitmen untuk mengembangkan
                         potensi dalam bidang teknologi informasi dan pendidikan.
                     </p>
                 </div>
                 <!-- Values -->
                 <div class="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-3">
-                    <div class="bg-gray-50 p-8 rounded-lg">
+                    <div class="bg-gray-50 p-8 rounded-lg transform transition-all duration-500 hover:translate-y-[-10px] stagger-item">
                         <div class="text-custom mb-4">
-                            <i class="fas fa-eye text-3xl"></i>
+                            <i class="fas fa-eye text-xl"></i>
                         </div>
-                        <h3 class="text-xl font-semibold text-gray-900">Visi</h3>
-                        <p class="mt-4 text-gray-600">
+                        <h3 class="text-xl font-semibold text-white">Visi</h3>
+                        <p class="mt-4 text-gray-800">
                             Menjadi wadah terdepan dalam pengembangan teknologi informasi yang inovatif dan kolaboratif,
                             menciptakan perubahan signifikan bagi sesama anggota dan masyarakat luas, serta membangun
                             kekompakan dan semangat bersama yang berkelanjutan.
                         </p>
                     </div>
-                    <div class="bg-gray-50 p-8 rounded-lg">
+                    <div class="bg-gray-50 p-8 rounded-lg transform transition-all duration-500 hover:translate-y-[-10px]">
                         <div class="text-custom mb-4">
                             <i class="fas fa-bullseye text-3xl"></i>
                         </div>
-                        <h3 class="text-xl font-semibold text-gray-900">Misi</h3>
-                        <p class="mt-4 text-gray-600">
+                        <h3 class="text-xl font-semibold text-white">Misi</h3>
+                        <p class="mt-4 text-gray-800">
                             Membangun solidaritas dan kekompakan antar anggota Let 23, mendorong inovasi teknologi
                             melalui pembelajaran dan eksperimen, memberdayakan keterampilan praktis dan kepemimpinan,
                             menciptakan dampak positif bagi masyarakat, mengutamakan pengembangan diri dan tim, serta
                             beradaptasi dengan perubahan teknologi dan tantangan baru.
                         </p>
                     </div>
-                    <div class="bg-gray-50 p-8 rounded-lg">
+                    <div class="bg-gray-50 p-8 rounded-lg transform transition-all duration-500 hover:translate-y-[-10px]">
                         <div class="text-custom mb-4">
                             <i class="fas fa-users text-3xl"></i>
                         </div>
-                        <h3 class="text-xl font-semibold text-gray-900">Nilai</h3>
-                        <p class="mt-4 text-gray-600">
+                        <h3 class="text-xl font-semibold text-white">Nilai</h3>
+                        <p class="mt-4 text-gray-800">
                             Mengedepankan nilai-nilai solidaritas, inovasi, pemberdayaan, dampak sosial, pengembangan
                             diri, kerja tim, serta adaptabilitas dalam setiap langkah dan keputusan, guna menciptakan
                             lingkungan yang suportif, kreatif, dan siap menghadapi perubahan demi mencapai tujuan
@@ -161,11 +160,11 @@
         </section>
 
         <!-- Gallery Section -->
-        <section id="galeri" class="py-24 bg-gray-50">
+        <section id="galeri" class="py-24 bg-gradient-to-b from-[#1a1a1a] to-[#121212] animate-on-scroll">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center">
-                    <h2 class="text-3xl font-bold text-gray-900">Galeri Kegiatan</h2>
-                    <p class="mt-4 text-lg text-gray-600">Dokumentasi kegiatan dan momen berharga komunitas Quantum Leap
+                    <h2 class="text-3xl font-bold text-white">Galeri <span class="text-custom">Kegiatan</span></h2>
+                    <p class="mt-4 text-lg text-gray-300">Dokumentasi kegiatan dan momen berharga komunitas Quantum Leap
                         23
                     </p>
                 </div>
@@ -179,12 +178,12 @@
                         <div class="swiper-wrapper">
                             <!-- Slide 1 -->
                             <div class="swiper-slide">
-                                <div class="relative group">
+                                <div class="relative group overflow-hidden rounded-lg">
                                     <img src="/galery/Kegiatan/FamilyGathering.jpg" alt="Kegiatan 1"
-                                        class="w-full h-64 object-cover rounded-lg">
+                                        class="w-full h-64 object-cover rounded-lg transition-transform duration-700 transform group-hover:scale-110">
                                     <div
-                                        class="absolute inset-0 bg-black bg-opacity-75 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center">
-                                        <p class="text-white text-lg font-medium">Family Gathering</p>
+                                        class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300 rounded-lg flex items-end justify-center">
+                                        <p class="text-white text-lg font-medium p-4 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">Family Gathering</p>
                                     </div>
                                 </div>
                             </div>
@@ -376,20 +375,10 @@
                     <div class="mt-8 text-center">
                         <a target="_blank" href="project/galeri.html">
                             <!-- Link Menuju Web Album -->
-                            <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
-                                See All Photos
+                            <button class="bg-gradient-to-r from-purple-600 to-indigo-600 hover:bg-gradient-to-l text-white font-bold py-3 px-6 rounded-lg shadow-lg shadow-purple-500/20 transition-all duration-300 transform hover:scale-105">
+                                <span class="relative z-10">See All Photos</span>
                             </button>
                         </a>
-
-                        <!-- <div id="custom-alert" class="hidden fixed inset-0 flex items-center justify-center z-50">
-                            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-                                <p class="text-gray-700 text-lg font-medium">Maaf, Page Belum Tersedia</p>
-                                <button onclick="hideCustomAlert()" class="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
-                                    OK
-                                </button>
-                            </div>
-                        </div> -->
-
                     </div>
                 </div>
             </div>
@@ -435,45 +424,51 @@
         -->
 
         <!-- Members Section -->
-        <section id="anggota" class="py-40">
+        <section id="anggota" class="py-40 animate-on-scroll">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center">
-                    <h2 class="text-6xl font-bold text-gray-100">Anggota Komunitas</h2>
-                    <p class="mt-4 text-lg text-gray-200">Tim kami yang berdedikasi untuk kemajuan Quantum Leap 23</p>
+                    <h2 class="text-6xl font-bold text-white"><span class="text-custom">Anggota</span> Komunitas</h2>
+                    <p class="mt-4 text-lg text-gray-300">Tim kami yang berdedikasi untuk kemajuan Quantum Leap 23</p>
                 </div>
                 <div class="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-5">
-                    <div class="bg-gray-50 p-6 rounded-lg text-center hover:shadow-lg transition-shadow duration-300 cursor-pointer member-item"
+                    <div class="bg-gray-50 p-6 rounded-lg text-center cursor-pointer member-item"
                         onclick="openModal('modalFajar')">
-                        <img src="/galery/Fajar.jpg" alt="Ketua" class="w-32 h-32 mx-auto rounded-full object-cover">
-                        <h3 class="mt-6 text-lg font-medium text-gray-900">M. Fajar Affan</h3>
+                        <div class="relative mx-auto w-32 h-32 overflow-hidden rounded-full mb-4 ring-2 ring-purple-500 ring-offset-4 ring-offset-[#1e1e1e]">
+                            <img src="/galery/Fajar.jpg" alt="Ketua" class="w-full h-full object-cover transition-transform duration-500">
+                        </div>
+                        <h3 class="mt-4 text-lg font-medium text-white">M. Fajar Affan</h3>
                         <p class="text-custom">Ketua Leting</p>
                     </div>
-                    <div class="bg-gray-50 p-6 rounded-lg text-center hover:shadow-lg transition-shadow duration-300 cursor-pointer member-item"
+                    <div class="bg-gray-50 p-6 rounded-lg text-center cursor-pointer member-item"
                         onclick="openModal('modalMahfoud')">
-                        <img src="/galery/MAHFUD.JPG" alt="Wakil Ketua"
-                            class="w-32 h-32 mx-auto rounded-full object-cover">
-                        <h3 class="mt-6 text-lg font-medium text-gray-900">Ruhul Mahfoud</h3>
+                        <div class="relative mx-auto w-32 h-32 overflow-hidden rounded-full mb-4 ring-2 ring-purple-500 ring-offset-4 ring-offset-[#1e1e1e]">
+                            <img src="/galery/MAHFUD.JPG" alt="Wakil Ketua" class="w-full h-full object-cover transition-transform duration-500">
+                        </div>
+                        <h3 class="mt-4 text-lg font-medium text-white">Ruhul Mahfoud</h3>
                         <p class="text-custom">Wakil Ketua 1</p>
                     </div>
-                    <div class="bg-gray-50 p-6 rounded-lg text-center hover:shadow-lg transition-shadow duration-300 cursor-pointer member-item"
+                    <div class="bg-gray-50 p-6 rounded-lg text-center cursor-pointer member-item"
                         onclick="openModal('modalRamadi')">
-                        <img src="/galery/RAMADI.jpg" alt="Sekretaris"
-                            class="w-32 h-32 mx-auto rounded-full object-cover">
-                        <h3 class="mt-6 text-lg font-medium text-gray-900">Ramadi Al Fitra</h3>
+                        <div class="relative mx-auto w-32 h-32 overflow-hidden rounded-full mb-4 ring-2 ring-purple-500 ring-offset-4 ring-offset-[#1e1e1e]">
+                            <img src="/galery/RAMADI.jpg" alt="Sekretaris" class="w-full h-full object-cover transition-transform duration-500">
+                        </div>
+                        <h3 class="mt-4 text-lg font-medium text-white">Ramadi Al Fitra</h3>
                         <p class="text-custom">Wakil Ketua 2</p>
                     </div>
-                    <div class="bg-gray-50 p-6 rounded-lg text-center hover:shadow-lg transition-shadow duration-300 cursor-pointer member-item"
+                    <div class="bg-gray-50 p-6 rounded-lg text-center cursor-pointer member-item"
                         onclick="openModal('modalAlfia')">
-                        <img src="/galery/Alfia.jpg" alt="Bendahara"
-                            class="w-32 h-32 mx-auto rounded-full object-cover">
-                        <h3 class="mt-6 text-lg font-medium text-gray-900">Alfia Malisa</h3>
+                        <div class="relative mx-auto w-32 h-32 overflow-hidden rounded-full mb-4 ring-2 ring-purple-500 ring-offset-4 ring-offset-[#1e1e1e]">
+                            <img src="/galery/Alfia.jpg" alt="Bendahara" class="w-full h-full object-cover transition-transform duration-500">
+                        </div>
+                        <h3 class="mt-4 text-lg font-medium text-white">Alfia Malisa</h3>
                         <p class="text-custom">Bendahara</p>
                     </div>
-                    <div class="bg-gray-50 p-6 rounded-lg text-center hover:shadow-lg transition-shadow duration-300 cursor-pointer member-item"
+                    <div class="bg-gray-50 p-6 rounded-lg text-center cursor-pointer member-item"
                         onclick="openModal('modalVera')">
-                        <img src="/galery/VERA.JPG" alt="Sekretaris"
-                            class="w-32 h-32 mx-auto rounded-full object-cover">
-                        <h3 class="mt-6 text-lg font-medium text-gray-900">Vera Riska</h3>
+                        <div class="relative mx-auto w-32 h-32 overflow-hidden rounded-full mb-4 ring-2 ring-purple-500 ring-offset-4 ring-offset-[#1e1e1e]">
+                            <img src="/galery/VERA.JPG" alt="Sekretaris" class="w-full h-full object-cover transition-transform duration-500">
+                        </div>
+                        <h3 class="mt-4 text-lg font-medium text-white">Vera Riska</h3>
                         <p class="text-custom">Sekretaris</p>
                     </div>
                 </div>
@@ -481,55 +476,73 @@
         </section>
 
         <!-- Modal HTML -->
-        <div id="modalFajar" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
-            <div class="bg-white p-8 rounded-lg max-w-lg w-full transform transition-transform duration-300 scale-0">
-                <img src="/galery/Fajar.jpg" alt="Ketua" class="w-52 h-52 mx-auto object-cover aspect-square mb-4">
-                <h2 class="text-2xl font-bold mb-4">M. Fajar Affan</h2>
-                <p>Ketua Leting</p>
-                <button class="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
-                    onclick="closeModal('modalFajar')">Close</button>
+        <div id="modalFajar" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center hidden z-50 transition-all duration-300">
+            <div class="modal-content p-8 rounded-lg max-w-lg w-full transform transition-all duration-500 scale-0 opacity-0 bg-gradient-to-b from-[#212121] to-[#1a1a1a] border border-purple-500/30 shadow-2xl">
+                <div class="relative mx-auto w-52 h-52 overflow-hidden rounded-full mb-6 border-4 border-purple-500 shadow-xl shadow-purple-500/20">
+                    <img src="/galery/Fajar.jpg" alt="Ketua" class="w-full h-full object-cover aspect-square">
+                </div>
+                <h2 class="text-2xl font-bold mb-4 text-white text-center">M. Fajar Affan</h2>
+                <p class="text-gray-300 text-center">Ketua Leting</p>
+                <div class="text-center">
+                    <button class="mt-6 bg-gradient-to-r from-purple-600 to-indigo-600 hover:bg-gradient-to-l text-white font-bold py-2 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
+                        onclick="closeModal('modalFajar')">Close</button>
+                </div>
             </div>
         </div>
 
-        <div id="modalMahfoud" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
-            <div class="bg-white p-8 rounded-lg max-w-lg w-full transform transition-transform duration-300 scale-0">
-                <img src="/galery/MAHFUD.JPG" alt="Wakil Ketua"
-                    class="w-52 h-52 mx-auto object-cover aspect-square mb-4">
-                <h2 class="text-2xl font-bold mb-4">Ruhul Mahfoud</h2>
-                <p>Wakil Ketua 1</p>
-                <button class="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
-                    onclick="closeModal('modalMahfoud')">Close</button>
+        <div id="modalMahfoud" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center hidden z-50 transition-all duration-300">
+            <div class="modal-content p-8 rounded-lg max-w-lg w-full transform transition-all duration-500 scale-0 opacity-0 bg-gradient-to-b from-[#212121] to-[#1a1a1a] border border-purple-500/30 shadow-2xl">
+                <div class="relative mx-auto w-52 h-52 overflow-hidden rounded-full mb-6 border-4 border-purple-500 shadow-xl shadow-purple-500/20">
+                    <img src="/galery/MAHFUD.JPG" alt="Wakil Ketua" class="w-full h-full object-cover aspect-square">
+                </div>
+                <h2 class="text-2xl font-bold mb-4 text-white text-center">Ruhul Mahfoud</h2>
+                <p class="text-gray-300 text-center">Wakil Ketua 1</p>
+                <div class="text-center">
+                    <button class="mt-6 bg-gradient-to-r from-purple-600 to-indigo-600 hover:bg-gradient-to-l text-white font-bold py-2 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
+                        onclick="closeModal('modalMahfoud')">Close</button>
+                </div>
             </div>
         </div>
 
-        <div id="modalRamadi" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
-            <div class="bg-white p-8 rounded-lg max-w-lg w-full transform transition-transform duration-300 scale-0">
-                <img src="/galery/RAMADI.jpg" alt="Sekretaris"
-                    class="w-52 h-52 mx-auto object-cover aspect-square mb-4">
-                <h2 class="text-2xl font-bold mb-4">Ramadi Al Fitra</h2>
-                <p>Wakil Ketua 2</p>
-                <button class="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
-                    onclick="closeModal('modalRamadi')">Close</button>
+        <div id="modalRamadi" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center hidden z-50 transition-all duration-300">
+            <div class="modal-content p-8 rounded-lg max-w-lg w-full transform transition-all duration-500 scale-0 opacity-0 bg-gradient-to-b from-[#212121] to-[#1a1a1a] border border-purple-500/30 shadow-2xl">
+                <div class="relative mx-auto w-52 h-52 overflow-hidden rounded-full mb-6 border-4 border-purple-500 shadow-xl shadow-purple-500/20">
+                    <img src="/galery/RAMADI.jpg" alt="Sekretaris" class="w-full h-full object-cover aspect-square">
+                </div>
+                <h2 class="text-2xl font-bold mb-4 text-white text-center">Ramadi Al Fitra</h2>
+                <p class="text-gray-300 text-center">Wakil Ketua 2</p>
+                <div class="text-center">
+                    <button class="mt-6 bg-gradient-to-r from-purple-600 to-indigo-600 hover:bg-gradient-to-l text-white font-bold py-2 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
+                        onclick="closeModal('modalRamadi')">Close</button>
+                </div>
             </div>
         </div>
 
-        <div id="modalAlfia" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
-            <div class="bg-white p-8 rounded-lg max-w-lg w-full transform transition-transform duration-300 scale-0">
-                <img src="/galery/Alfia.jpg" alt="Bendahara" class="w-52 h-52 mx-auto object-cover aspect-square mb-4">
-                <h2 class="text-2xl font-bold mb-4">Alfia Malisa</h2>
-                <p>Bendahara</p>
-                <button class="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
-                    onclick="closeModal('modalAlfia')">Close</button>
+        <div id="modalAlfia" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center hidden z-50 transition-all duration-300">
+            <div class="modal-content p-8 rounded-lg max-w-lg w-full transform transition-all duration-500 scale-0 opacity-0 bg-gradient-to-b from-[#212121] to-[#1a1a1a] border border-purple-500/30 shadow-2xl">
+                <div class="relative mx-auto w-52 h-52 overflow-hidden rounded-full mb-6 border-4 border-purple-500 shadow-xl shadow-purple-500/20">
+                    <img src="/galery/Alfia.jpg" alt="Bendahara" class="w-full h-full object-cover aspect-square">
+                </div>
+                <h2 class="text-2xl font-bold mb-4 text-white text-center">Alfia Malisa</h2>
+                <p class="text-gray-300 text-center">Bendahara</p>
+                <div class="text-center">
+                    <button class="mt-6 bg-gradient-to-r from-purple-600 to-indigo-600 hover:bg-gradient-to-l text-white font-bold py-2 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
+                        onclick="closeModal('modalAlfia')">Close</button>
+                </div>
             </div>
         </div>
 
-        <div id="modalVera" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
-            <div class="bg-white p-8 rounded-lg max-w-lg w-full transform transition-transform duration-300 scale-0">
-                <img src="/galery/VERA.JPG" alt="Sekretaris" class="w-52 h-52 mx-auto object-cover aspect-square mb-4">
-                <h2 class="text-2xl font-bold mb-4">Vera Riska</h2>
-                <p>Sekretaris</p>
-                <button class="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
-                    onclick="closeModal('modalVera')">Close</button>
+        <div id="modalVera" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center hidden z-50 transition-all duration-300">
+            <div class="modal-content p-8 rounded-lg max-w-lg w-full transform transition-all duration-500 scale-0 opacity-0 bg-gradient-to-b from-[#212121] to-[#1a1a1a] border border-purple-500/30 shadow-2xl">
+                <div class="relative mx-auto w-52 h-52 overflow-hidden rounded-full mb-6 border-4 border-purple-500 shadow-xl shadow-purple-500/20">
+                    <img src="/galery/VERA.JPG" alt="Sekretaris" class="w-full h-full object-cover aspect-square">
+                </div>
+                <h2 class="text-2xl font-bold mb-4 text-white text-center">Vera Riska</h2>
+                <p class="text-gray-300 text-center">Sekretaris</p>
+                <div class="text-center">
+                    <button class="mt-6 bg-gradient-to-r from-purple-600 to-indigo-600 hover:bg-gradient-to-l text-white font-bold py-2 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
+                        onclick="closeModal('modalVera')">Close</button>
+                </div>
             </div>
         </div>
 
@@ -613,62 +626,74 @@
         </section> -->
 
         <!-- Blog Section -->
-        <section id="blog" class="py-24 bg-white">
+        <section id="blog" class="py-24 bg-gradient-to-b from-[#121212] to-[#1a1a1a] animate-on-scroll">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center">
-                    <h2 class="text-3xl font-bold text-gray-900">Blog & Artikel</h2>
-                    <p class="mt-4 text-lg text-gray-600">Informasi terkini seputar teknologi dan pendidikan</p>
+                    <h2 class="text-3xl font-bold text-white"><span class="text-custom">Blog</span> & Artikel</h2>
+                    <p class="mt-4 text-lg text-gray-300">Informasi terkini seputar teknologi dan pendidikan</p>
                 </div>
                 <div class="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-                    <article class="bg-gray-50 rounded-lg overflow-hidden">
-                        <img src="/galery/Empty Page.jpeg" alt="Artikel 1" class="w-full h-48 object-cover">
+                    <article class="bg-gray-50 rounded-lg overflow-hidden shadow-lg transform transition-all duration-500 hover:translate-y-[-10px]">
+                        <div class="relative overflow-hidden h-48">
+                            <img src="/galery/Empty Page.jpeg" alt="Artikel 1" class="w-full h-full object-cover transition-transform duration-700 transform hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#1e1e1e] via-transparent to-transparent opacity-70"></div>
+                        </div>
                         <div class="p-6">
-                            <h3 class="text-xl font-semibold text-gray-900">Undefined Blog</h3>
-                            <p class="mt-4 text-gray-600">
+                            <h3 class="text-xl font-semibold text-white">Undefined Blog</h3>
+                            <p class="mt-4 text-gray-300">
                                 Belum Punya Blog
                             </p>
-                            <a href="#" class="mt-4 text-custom inline-flex items-center">
-                                Baca selengkapnya
-                                <i class="fas fa-arrow-right ml-2"></i>
+                            <a href="#" class="mt-4 text-custom inline-flex items-center group">
+                                <span class="group-hover:mr-2 transition-all duration-300">Baca selengkapnya</span>
+                                <i class="fas fa-arrow-right ml-2 transform transition-transform duration-300 group-hover:translate-x-2"></i>
                             </a>
                         </div>
                     </article>
-                    <article class="bg-gray-50 rounded-lg overflow-hidden">
-                        <img src="/galery/Empty Page.jpeg" alt="Artikel 2" class="w-full h-48 object-cover">
+                    <article class="bg-gray-50 rounded-lg overflow-hidden shadow-lg transform transition-all duration-500 hover:translate-y-[-10px]">
+                        <div class="relative overflow-hidden h-48">
+                            <img src="/galery/Empty Page.jpeg" alt="Artikel 2" class="w-full h-full object-cover transition-transform duration-700 transform hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#1e1e1e] via-transparent to-transparent opacity-70"></div>
+                        </div>
                         <div class="p-6">
-                            <h3 class="text-xl font-semibold text-gray-900">Undefined Blog</h3>
-                            <p class="mt-4 text-gray-600">
+                            <h3 class="text-xl font-semibold text-white">Undefined Blog</h3>
+                            <p class="mt-4 text-gray-300">
                                 Belum Punya Blog
                             </p>
-                            <a href="#" class="mt-4 text-custom inline-flex items-center">
-                                Baca selengkapnya
-                                <i class="fas fa-arrow-right ml-2"></i>
+                            <a href="#" class="mt-4 text-custom inline-flex items-center group">
+                                <span class="group-hover:mr-2 transition-all duration-300">Baca selengkapnya</span>
+                                <i class="fas fa-arrow-right ml-2 transform transition-transform duration-300 group-hover:translate-x-2"></i>
                             </a>
                         </div>
                     </article>
-                    <article class="bg-gray-50 rounded-lg overflow-hidden">
-                        <img src="/galery/Empty Page.jpeg" alt="Artikel 2" class="w-full h-48 object-cover">
+                    <article class="bg-gray-50 rounded-lg overflow-hidden shadow-lg transform transition-all duration-500 hover:translate-y-[-10px]">
+                        <div class="relative overflow-hidden h-48">
+                            <img src="/galery/Empty Page.jpeg" alt="Artikel 3" class="w-full h-full object-cover transition-transform duration-700 transform hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#1e1e1e] via-transparent to-transparent opacity-70"></div>
+                        </div>
                         <div class="p-6">
-                            <h3 class="text-xl font-semibold text-gray-900">Undefined Blog</h3>
-                            <p class="mt-4 text-gray-600">
+                            <h3 class="text-xl font-semibold text-white">Undefined Blog</h3>
+                            <p class="mt-4 text-gray-300">
                                 Belum Punya Blog
                             </p>
-                            <a href="#" class="mt-4 text-custom inline-flex items-center">
-                                Baca selengkapnya
-                                <i class="fas fa-arrow-right ml-2"></i>
+                            <a href="#" class="mt-4 text-custom inline-flex items-center group">
+                                <span class="group-hover:mr-2 transition-all duration-300">Baca selengkapnya</span>
+                                <i class="fas fa-arrow-right ml-2 transform transition-transform duration-300 group-hover:translate-x-2"></i>
                             </a>
                         </div>
                     </article>
-                    <article class="bg-gray-50 rounded-lg overflow-hidden">
-                        <img src="/galery/Empty Page.jpeg" alt="Artikel 3" class="w-full h-48 object-cover">
+                    <article class="bg-gray-50 rounded-lg overflow-hidden shadow-lg transform transition-all duration-500 hover:translate-y-[-10px]">
+                        <div class="relative overflow-hidden h-48">
+                            <img src="/galery/Empty Page.jpeg" alt="Artikel 4" class="w-full h-full object-cover transition-transform duration-700 transform hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#1e1e1e] via-transparent to-transparent opacity-70"></div>
+                        </div>
                         <div class="p-6">
-                            <h3 class="text-xl font-semibold text-gray-900">Undefined Blog</h3>
-                            <p class="mt-4 text-gray-600">
+                            <h3 class="text-xl font-semibold text-white">Undefined Blog</h3>
+                            <p class="mt-4 text-gray-300">
                                 Belum Punya Blog
                             </p>
-                            <a href="#" class="mt-4 text-custom inline-flex items-center">
-                                Baca selengkapnya
-                                <i class="fas fa-arrow-right ml-2"></i>
+                            <a href="#" class="mt-4 text-custom inline-flex items-center group">
+                                <span class="group-hover:mr-2 transition-all duration-300">Baca selengkapnya</span>
+                                <i class="fas fa-arrow-right ml-2 transform transition-transform duration-300 group-hover:translate-x-2"></i>
                             </a>
                         </div>
                     </article>
@@ -678,18 +703,20 @@
 
         <!-- Contact Section -->
         <!-- Contact Form -->
-        <section id="kontak" class="flex items-center justify-center py-20">
-            <div class="bg-white p-8 rounded-lg shadow-lg w-96">
-                <h2 class="text-2xl font-semibold mb-6 text-center"> <i class="fas fa-phone text-custom w-6"></i>
-                    Hubungi Kami</h2>
+        <section id="kontak" class="flex items-center justify-center py-20 animate-on-scroll">
+            <div class="bg-gray-50 p-8 rounded-lg shadow-xl w-96 border border-purple-500/20">
+                <h2 class="text-2xl font-semibold mb-6 text-center text-white"> 
+                    <i class="fas fa-phone text-custom w-6 animate-pulse"></i>
+                    <span class="text-custom">Hubungi</span> Kami
+                </h2>
                 <form id="contactForm">
                     <input type="text" id="nama" placeholder="Nama Anda" required
-                        class="w-full p-3 mb-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
-                    <textarea id="pesan" placeholder="Pesan Anda" required
-                        class="w-full p-3 mb-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"></textarea>
+                        class="w-full p-3 mb-4 border rounded-md focus:outline-none focus:ring-2">
+                    <textarea id="pesan" placeholder="Pesan Anda" required rows="4"
+                        class="w-full p-3 mb-4 border rounded-md focus:outline-none focus:ring-2"></textarea>
                     <button type="submit"
-                        class="w-full bg-green-500 text-white py-3 rounded-md hover:bg-green-600 transition duration-300">
-                        Kirim via WhatsApp
+                        class="w-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-3 rounded-md hover:bg-gradient-to-l transition-all duration-300 transform hover:scale-105 shadow-lg shadow-purple-500/20">
+                        Kirim via WhatsApp <i class="fab fa-whatsapp ml-2"></i>
                     </button>
                 </form>
             </div>
@@ -699,42 +726,57 @@
     </main>
 
     <!-- Footer -->
-    <footer id="footer" class="bg-gray-900">
+    <footer id="footer">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div>
-                    <a href="#beranda"> <img class="h-20" src="/logo.png" alt="Quantum Leap Logo"></a>
+                    <a href="#beranda" class="block transform transition-transform duration-500 hover:scale-105"> 
+                        <img class="h-20" src="/logo.png" alt="Quantum Leap Logo">
+                    </a>
                     <p class="mt-4 text-gray-400 text-sm">
                         Komunitas mahasiswa PTI 23 <br \> yang berdedikasi untuk kemajuan teknologi dan pendidikan.
                     </p>
                 </div>
                 <div>
-                    <h3 class="text-white font-semibold mb-4">Link Cepat</h3>
+                    <h3 class="text-custom font-semibold mb-4">Link Cepat</h3>
                     <ul class="space-y-2 text-gray-400">
-                        <li><a href="#beranda" class="hover:text-white">Beranda</a></li>
-                        <li><a href="#tentang" class="hover:text-white">Tentang Kami</a></li>
-                        <li><a href="#galeri" class="hover:text-white">Galeri</a></li>
-                        <!-- <li><a href="#program" class="hover:text-white">Program</a></li> -->
+                        <li><a href="#beranda" class="hover:text-custom transition-colors duration-300 flex items-center">
+                            <i class="fas fa-chevron-right mr-2 text-xs opacity-0 transform translate-x-[-10px] transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0"></i>
+                            Beranda
+                        </a></li>
+                        <li><a href="#tentang" class="hover:text-custom transition-colors duration-300 flex items-center">
+                            <i class="fas fa-chevron-right mr-2 text-xs opacity-0 transform translate-x-[-10px] transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0"></i>
+                            Tentang Kami
+                        </a></li>
+                        <li><a href="#galeri" class="hover:text-custom transition-colors duration-300 flex items-center">
+                            <i class="fas fa-chevron-right mr-2 text-xs opacity-0 transform translate-x-[-10px] transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0"></i>
+                            Galeri
+                        </a></li>
                     </ul>
                 </div>
-                <!-- <div>
-                    <h3 class="text-white font-semibold mb-4">Program</h3>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="#" class="hover:text-white">Coding Bootcamp</a></li>
-                        <li><a href="#" class="hover:text-white">Workshop</a></li>
-                        <li><a href="#" class="hover:text-white">Proyek Tim</a></li>
-                        <li><a href="#" class="hover:text-white">Mentoring</a></li>
-                    </ul>
-                </div> -->
                 <div>
-                    <h3 class="text-white font-semibold mb-4">Kontak</h3>
+                    <h3 class="text-custom font-semibold mb-4">Kontak</h3>
                     <ul class="space-y-2 text-gray-400">
-                        <li><a href="mailto:quantumleap@email.com" class="hover:text-white">quantumleap@email.com</a>
-                        </li>
-                        <li><a href="#kontak" class="hover:text-white">+62812 3456
-                                7890</a></li>
-                        <!-- <li>Kampus PTI, Gedung A Lantai 3</li> -->
+                        <li><a href="mailto:quantumleap@email.com" class="hover:text-custom transition-colors duration-300 flex items-center">
+                            <i class="fas fa-envelope mr-2"></i>
+                            quantumleap@email.com
+                        </a></li>
+                        <li><a href="#kontak" class="hover:text-custom transition-colors duration-300 flex items-center">
+                            <i class="fas fa-phone mr-2"></i>
+                            +62812 3456 7890
+                        </a></li>
                     </ul>
+                </div>
+                <div>
+                    <h3 class="text-custom font-semibold mb-4">Social Media</h3>
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/quantumleap_23/" target="_blank" class="text-gray-400 hover:text-custom transition-colors duration-300 transform hover:scale-110">
+                            <i class="fab fa-instagram text-2xl"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@quantumleap_23" target="_blank" class="text-gray-400 hover:text-custom transition-colors duration-300 transform hover:scale-110">
+                            <i class="fab fa-tiktok text-2xl"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
             <div class="mt-8 pt-8 border-t border-gray-800">
@@ -745,8 +787,9 @@
         </div>
     </footer>
 
-<script src="script.js"></script>
 
+
+<script src="script.js"></script>
 </body>
 
 </html>
