@@ -271,6 +271,13 @@ button:hover:after {
   color: #000000;
 }
 
+.light-mode #tentangvalues p {
+  color: #000;
+}
+.light-mode #tentangvalues h3 {
+  color: #000;
+}
+
 .light-mode #tentang p.text-lg,
 .light-mode #galeri p.text-lg {
   color: #333333;
