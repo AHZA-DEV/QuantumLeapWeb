@@ -201,7 +201,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (nama && pesan) {
                 // Format the message for WhatsApp
                 const whatsappMessage = encodeURIComponent(`Nama: ${nama}\nPesan: ${pesan}`);
-                const whatsappLink = `https://wa.me/6281234567890?text=${whatsappMessage}`;
+                const whatsappLink = `https://wa.me/6282267885262?text=${whatsappMessage}`;
                 
                 window.open(whatsappLink, '_blank');
                 
