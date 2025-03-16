@@ -8,7 +8,7 @@ const videoStories = [
     },
     {
         id: 2,
-        url: 'https://drive.google.com/file/d/1jw2YvN-kFcmIJjkreG95vqaSNxV45JX2/preview?embedded=true',
+        url: 'https://drive.google.com/file/d/1OHZkmPP3D7W6v_60aHWDGHtgOiBIws1f/preview?embedded=true',
         thumbnail: 'Kegiatan/Bukber Family Quantum Leap.jpg',
         title: 'Akreditasi'
     },
@@ -93,7 +93,7 @@ const galleryItems = [
         title: 'Video Bukber Family Quantum Leap 23, 2025',
         category: 'videos',
         type: 'video',
-        url: 'kegiatan/videos/bukber.mp4',
+        url: 'https://drive.google.com/file/d/1jw2YvN-kFcmIJjkreG95vqaSNxV45JX2/preview?embedded=true',
         downloads: 0,
         date: '2024-03-12'
     },
@@ -102,7 +102,7 @@ const galleryItems = [
         title: 'Video Bukber Family Quantum Leap 23, 2025',
         category: 'videos',
         type: 'video',
-        url: 'kegiatan/videos/bukber1.mp4',
+        url: 'https://drive.google.com/file/d/1OHZkmPP3D7W6v_60aHWDGHtgOiBIws1f/preview?embedded=true',
         downloads: 0,
         date: '2024-03-12'
     },
@@ -327,10 +327,10 @@ function createGalleryItem(item) {
 
     let mediaContent;
     if (item.type === 'video') {
-        mediaContent = `<div class="cursor-pointer video-preview" onclick="openVideoModal('${item.url}', '${item.title}')">
-            <video src="${item.url}" muted playsinline class="w-full h-64 object-cover">
-                Your browser does not support the video tag.
-            </video>
+        mediaContent = `<div class="cursor-pointer video-preview relative" onclick="openVideoModal('${item.url}', '${item.title}')">
+            <div class="w-full h-64 bg-black">
+                <iframe src="${item.url}" frameborder="0" class="w-full h-full"></iframe>
+            </div>
             <div class="absolute inset-0 flex items-center justify-center">
                 <i class="fas fa-play-circle text-4xl text-white opacity-80"></i>
             </div>
@@ -466,9 +466,7 @@ function openVideoModal(videoUrl, title) {
     modal.className = 'fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50';
     modal.innerHTML = `
         <div class="relative max-w-4xl w-full mx-4">
-            <video src="${videoUrl}" controls class="w-full rounded-lg shadow-lg">
-                Your browser does not support the video tag.
-            </video>
+            <iframe src="${videoUrl}" frameborder="0" allowfullscreen class="w-full h-[80vh] rounded-lg shadow-lg"></iframe>
             <div class="absolute top-4 right-4 flex gap-2">
                 <button class="text-white text-xl bg-gray-800/50 rounded-full w-8 h-8 flex items-center justify-center hover:bg-gray-700/50 transition-colors" onclick="toggleFullscreen(this.parentElement.parentElement)">
                     <i class="fas fa-expand"></i>
