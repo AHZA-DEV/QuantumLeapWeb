@@ -1,158 +1,312 @@
+// Video stories data
+const videoStories = [
+    {
+        id: 1,
+        url: 'kegiatan/videos/bukber.mp4',
+        thumbnail: 'Kegiatan/Bukber Family Quantum Leap5.jpg',
+        title: 'Buka Bersama'
+    },
+    {
+        id: 2,
+        url: 'kegiatan/videos/bukber1.mp4',
+        thumbnail: 'Kegiatan/Bukber Family Quantum Leap.jpg',
+        title: 'Akreditasi'
+    },
+    // {
+    //     id: 3,
+    //     url: 'kegiatan/videos/bukber.mp4',
+    //     thumbnail: 'Kegiatan/Futsal1.jpg',
+    //     title: 'Futsal'
+    // },
+    // {
+    //     id: 4,
+    //     url: 'https://assets.mixkit.co/videos/preview/mixkit-group-of-friends-partying-happily-4640-large.mp4',
+    //     thumbnail: 'Kegiatan/Futsal1.jpg',
+    //     title: 'Futsal'
+    // },
+    // {
+    //     id: 5,
+    //     url: 'https://assets.mixkit.co/videos/preview/mixkit-group-of-friends-partying-happily-4640-large.mp4',
+    //     thumbnail: 'Kegiatan/Futsal1.jpg',
+    //     title: 'Futsal'
+    // },
+    // {
+    //     id: 6,
+    //     url: 'https://assets.mixkit.co/videos/preview/mixkit-group-of-friends-partying-happily-4640-large.mp4',
+    //     thumbnail: 'Kegiatan/Futsal1.jpg',
+    //     title: 'Futsal'
+    // }
+];
+
+// Function to create video story elements
+function initializeVideoStories() {
+    const storiesContainer = document.getElementById('video-stories');
+    if (!storiesContainer) return;
+
+    storiesContainer.innerHTML = '';
+    videoStories.forEach(story => {
+        const storyElement = document.createElement('div');
+        storyElement.className = 'flex-shrink-0 cursor-pointer relative';
+        storyElement.innerHTML = `
+            <div class="w-20 h-20 rounded-full border-2 border-indigo-600 p-1 hover:scale-105 transition-transform">
+                <img src="${story.thumbnail}" class="w-full h-full rounded-full object-cover" alt="${story.title}">
+            </div>
+            <p class="text-center mt-1 text-sm">${story.title}</p>
+        `;
+
+        storyElement.addEventListener('click', () => {
+            const modal = document.createElement('div');
+            modal.className = 'fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50';
+            modal.innerHTML = `
+                <div class="relative max-w-2xl w-full mx-4">
+                    <video src="${story.url}" autoplay controls class="w-full rounded-lg shadow-lg">
+                        Your browser does not support the video tag.
+                    </video>
+                    <button class="absolute top-4 right-4 text-white text-xl bg-gray-800 rounded-full p-2 hover:bg-gray-700" onclick="this.parentElement.parentElement.remove()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            `;
+
+            document.body.appendChild(modal);
+            const video = modal.querySelector('video');
+
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    video.pause();
+                    modal.remove();
+                }
+            });
+        });
+
+        storiesContainer.appendChild(storyElement);
+    });
+}
+
 // Sample data - Replace with your actual data
 const galleryItems = [
     {
         id: 1,
-        title: 'Peusijuk',
-        category: 'events',
-        imageUrl: 'Kegiatan/Peusijuek2.jpg',
+        title: 'Video Bukber Family Quantum Leap 23, 2025',
+        category: 'videos',
+        type: 'video',
+        url: 'kegiatan/videos/bukber.mp4',
         downloads: 0,
-        date: '2024-01-15'
+        date: '2024-03-12'
     },
     {
         id: 2,
-        title: 'Buka Bersama',
-        category: 'activities',
+        title: 'Video Bukber Family Quantum Leap 23, 2025',
+        category: 'videos',
+        type: 'video',
+        url: 'kegiatan/videos/bukber1.mp4',
+        downloads: 0,
+        date: '2024-03-12'
+    },
+    {
+        id: 3,
+        title: 'Buka Bersama Family Quantum Leap 23, 2025',
+        category: 'photo',
+        imageUrl: 'Kegiatan/Bukber Family Quantum Leap.jpg',
+        downloads: 0,
+        date: '2024-02-01'
+    },
+    {
+        id: 4,
+        title: 'Buka Bersama Family Quantum Leap 23, 2025',
+        category: 'photo',
+        imageUrl: 'Kegiatan/Bukber Family Quantum Leap2.jpg',
+        downloads: 0,
+        date: '2024-02-01'
+    },
+    {
+        id: 5,
+        title: 'Buka Bersama Family Quantum Leap 23, 2025',
+        category: 'photo',
+        imageUrl: 'Kegiatan/Bukber Family Quantum Leap3.jpg',
+        downloads: 0,
+        date: '2024-02-01'
+    },
+    {
+        id: 6,
+        title: 'Buka Bersama Family Quantum Leap 23, 2025',
+        category: 'photo',
+        imageUrl: 'Kegiatan/Bukber Family Quantum Leap4.jpg',
+        downloads: 0,
+        date: '2024-02-01'
+    },
+    {
+        id: 7,
+        title: 'Buka Bersama Family Quantum Leap 23, 2025',
+        category: 'photo',
+        imageUrl: 'Kegiatan/Bukber Family Quantum Leap5.jpg',
+        downloads: 0,
+        date: '2024-02-01'
+    },
+    {
+        id: 8,
+        title: 'Buka Bersama Family Quantum Leap 23, 2025',
+        category: 'photo',
+        imageUrl: 'Kegiatan/Bukber Family Quantum Leap6.jpg',
+        downloads: 0,
+        date: '2024-02-01'
+    },
+    {
+        id: 9,
+        title: 'Buka Bersama Family Quantum Leap 23, 2025',
+        category: 'photo',
+        imageUrl: 'Kegiatan/Bukber Family Quantum Leap7.jpg',
+        downloads: 0,
+        date: '2024-02-01'
+    },
+    {
+        id: 10,
+        title: 'Buka Bersama Family Quantum Leap 2024',
+        category: 'photo',
         imageUrl: 'Kegiatan/BukaBersama.jpg',
         downloads: 0,
         date: '2024-02-01'
     },
     {
-        id: 3,
-        title: 'Akreditasi',
-        category: 'activities',
-        imageUrl: 'Kegiatan/AkreditasiProdi.jpg',
-        downloads: 0,
-        date: '2024-02-15'
-    },
-    {
-        id: 4,
-        title: 'Futsal',
-        category: 'activities',
-        imageUrl: 'Kegiatan/Futsal1.jpg',
-        downloads: 0,
-        date: '2024-02-15'
-    },
-    {
-        id: 5,
-        title: 'futsal',
-        category: 'activities',
-        imageUrl: 'Kegiatan/Futsal2.jpg',
-        downloads: 0,
-        date: '2024-02-15'
-    },
-    {
-        id: 6,
-        title: 'Futsal',
-        category: 'activities',
-        imageUrl: 'Kegiatan/Futsal3.jpg',
-        downloads: 0,
-        date: '2024-02-15'
-    },
-    {
-        id: 7,
-        title: 'Futsal',
-        category: 'activities',
-        imageUrl: 'Kegiatan/Futsal4.jpg',
-        downloads: 0,
-        date: '2024-02-15'
-    },
-    {
-        id: 8,
-        title: 'Futsal',
-        category: 'activities',
-        imageUrl: 'Kegiatan/Futsal5.jpg',
-        downloads: 0,
-        date: '2024-02-15'
-    },
-    {
-        id: 8,
-        title: 'Futsal',
-        category: 'activities',
-        imageUrl: 'Kegiatan/Futsal6.jpg',
-        downloads: 0,
-        date: '2024-02-15'
-    },
-    {
-        id: 9,
-        title: 'Futsal',
-        category: 'activities',
-        imageUrl: 'Kegiatan/Futsal7.jpg',
-        downloads: 0,
-        date: '2024-02-15'
-    },
-    {
-        id: 10,
-        title: 'Futsal',
-        category: 'activities',
-        imageUrl: 'Kegiatan/Futsal8.jpg',
-        downloads: 0,
-        date: '2024-02-15'
-    },
-    {
         id: 11,
-        title: 'Futsal',
-        category: 'activities',
-        imageUrl: 'Kegiatan/Futsal9.jpg',
+        title: 'Akreditasi',
+        category: 'photo',
+        imageUrl: 'Kegiatan/AkreditasiProdi.jpg',
         downloads: 0,
         date: '2024-02-15'
     },
     {
         id: 12,
         title: 'Futsal',
-        category: 'activities',
-        imageUrl: 'Kegiatan/Futsal10.jpg',
+        category: 'photo',
+        imageUrl: 'Kegiatan/Futsal1.jpg',
         downloads: 0,
         date: '2024-02-15'
     },
     {
         id: 13,
-        title: 'Maulid Nabi Muhammad',
-        category: 'activities',
-        imageUrl: 'Kegiatan/Maulid.jpg',
+        title: 'Futsal',
+        category: 'photo',
+        imageUrl: 'Kegiatan/Futsal2.jpg',
         downloads: 0,
         date: '2024-02-15'
     },
     {
         id: 14,
-        title: 'Peusijuek',
-        category: 'activities',
-        imageUrl: 'Kegiatan/Peusijuek1.jpg',
+        title: 'Futsal',
+        category: 'photo',
+        imageUrl: 'Kegiatan/Futsal3.jpg',
         downloads: 0,
         date: '2024-02-15'
     },
     {
         id: 15,
-        title: 'Salah satu keluarga quantum mengikuti DIKLATPIM',
-        category: 'activities',
-        imageUrl: 'Kegiatan/Diklat.jpg',
+        title: 'Futsal',
+        category: 'photo',
+        imageUrl: 'Kegiatan/Futsal4.jpg',
         downloads: 0,
         date: '2024-02-15'
     },
-    // Add more items as needed
+    {
+        id: 16,
+        title: 'Futsal',
+        category: 'photo',
+        imageUrl: 'Kegiatan/Futsal5.jpg',
+        downloads: 0,
+        date: '2024-02-15'
+    },
+    {
+        id: 17,
+        title: 'Futsal',
+        category: 'photo',
+        imageUrl: 'Kegiatan/Futsal6.jpg',
+        downloads: 0,
+        date: '2024-02-15'
+    },
+    {
+        id: 18,
+        title: 'Futsal',
+        category: 'photo',
+        imageUrl: 'Kegiatan/Futsal7.jpg',
+        downloads: 0,
+        date: '2024-02-15'
+    },
+    {
+        id: 19,
+        title: 'Futsal',
+        category: 'photo',
+        imageUrl: 'Kegiatan/Futsal8.jpg',
+        downloads: 0,
+        date: '2024-02-15'
+    },
+    {
+        id: 20,
+        title: 'Futsal',
+        category: 'photo',
+        imageUrl: 'Kegiatan/Futsal9.jpg',
+        downloads: 0,
+        date: '2024-02-15'
+    },
+    {
+        id: 21,
+        title: 'Futsal',
+        category: 'photo',
+        imageUrl: 'Kegiatan/Futsal10.jpg',
+        downloads: 0,
+        date: '2024-02-15'
+    },
+    {
+        id: 22,
+        title: 'Maulid Nabi Muhammad',
+        category: 'photo',
+        imageUrl: 'Kegiatan/Maulid.jpg',
+        downloads: 0,
+        date: '2024-02-15'
+    },
+    {
+        id: 23,
+        title: 'Peusijuek',
+        category: 'photo',
+        imageUrl: 'Kegiatan/Peusijuek1.jpg',
+        downloads: 0,
+        date: '2024-02-15'
+    },
+    {
+        id: 24,
+        title: 'Salah satu keluarga quantum mengikuti DIKLATPIM',
+        category: 'photo',
+        imageUrl: 'Kegiatan/Diklat.jpg',
+        downloads: 0,
+        date: '2024-02-15'
+    }
 ];
 
-const albums = [
-    {
-        id: 1,
-        title: 'Annual Meetup 2024',
-        cover: 'https://source.unsplash.com/random/800x600/?conference',
-        count: 25
-    },
-    {
-        id: 2,
-        title: 'Workshop Series',
-        cover: 'https://source.unsplash.com/random/800x600/?workshop',
-        count: 15
-    },
-    {
-        id: 3,
-        title: 'Community Events',
-        cover: 'https://source.unsplash.com/random/800x600/?event',
-        count: 30
-    },
-];
+
+
+// const albums = [
+//     {
+//         id: 1,
+//         title: 'Annual Meetup 2024',
+//         cover: 'https://source.unsplash.com/random/800x600/?conference',
+//         count: 25
+//     },
+//     {
+//         id: 2,
+//         title: 'Workshop Series',
+//         cover: 'https://source.unsplash.com/random/800x600/?workshop',
+//         count: 15
+//     },
+//     {
+//         id: 3,
+//         title: 'Community Events',
+//         cover: 'https://source.unsplash.com/random/800x600/?event',
+//         count: 30
+//     },
+// ];
 
 // Initialize the gallery
+
+
 function initializeGallery() {
     const galleryGrid = document.getElementById('gallery-grid');
     galleryItems.forEach(item => {
@@ -165,21 +319,34 @@ function initializeGallery() {
 function createGalleryItem(item) {
     const div = document.createElement('div');
     div.className = 'gallery-item bg-white rounded-lg shadow-md overflow-hidden';
-    // Add data attributes for filtering
     div.setAttribute('data-category', item.category);
     div.setAttribute('data-id', item.id);
-    
-    div.innerHTML = `
-        <a href="${item.imageUrl}" data-lightbox="gallery" data-title="${item.title}">
+
+    let mediaContent;
+    if (item.type === 'video') {
+        mediaContent = `<div class="cursor-pointer video-preview" onclick="openVideoModal('${item.url}', '${item.title}')">
+            <video src="${item.url}" muted playsinline class="w-full h-64 object-cover">
+                Your browser does not support the video tag.
+            </video>
+            <div class="absolute inset-0 flex items-center justify-center">
+                <i class="fas fa-play-circle text-4xl text-white opacity-80"></i>
+            </div>
+        </div>`;
+    } else {
+        mediaContent = `<a href="${item.imageUrl}" data-lightbox="gallery" data-title="${item.title}">
             <img src="${item.imageUrl}" alt="${item.title}" class="w-full h-64 object-cover">
-        </a>
+        </a>`;
+    }
+
+    div.innerHTML = `
+        ${mediaContent}
         <div class="p-4">
             <h3 class="text-lg font-semibold mb-2">${item.title}</h3>
             <div class="flex justify-between items-center">
                 <span class="text-sm text-gray-500">${item.date}</span>
                 <div class="flex items-center space-x-2">
                     <span class="text-sm text-gray-500 download-count">${item.downloads} downloads</span>
-                    <button onclick="downloadImage('${item.imageUrl}', ${item.id})" 
+                    <button onclick="downloadMedia('${item.type === 'video' ? item.url : item.imageUrl}', ${item.id})" 
                             class="px-3 py-1 bg-indigo-600 text-white rounded-md hover:bg-indigo-700">
                         <i class="fas fa-download"></i>
                     </button>
@@ -227,7 +394,7 @@ function filterGallery(category) {
 }
 
 // Download image function
-async function downloadImage(url, id) {
+async function downloadMedia(url, id) {
     try {
         // Use relative path for images
         const response = await fetch(url);
@@ -235,11 +402,11 @@ async function downloadImage(url, id) {
         const downloadUrl = window.URL.createObjectURL(blob);
         const link = document.createElement('a');
         link.href = downloadUrl;
-        
+
         // Extract filename from the URL path
         const filename = url.split('/').pop();
         link.download = filename || `quantum-leap-${id}.jpg`;
-        
+
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
@@ -290,8 +457,44 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
     });
 });
 
+// Function to open video modal
+function openVideoModal(videoUrl, title) {
+    const modal = document.createElement('div');
+    modal.className = 'fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50';
+    modal.innerHTML = `
+        <div class="relative max-w-4xl w-full mx-4">
+            <video src="${videoUrl}" controls class="w-full rounded-lg shadow-lg">
+                Your browser does not support the video tag.
+            </video>
+            <button class="absolute top-4 right-4 text-white text-xl bg-gray-800/50 rounded-full w-8 h-8 flex items-center justify-center hover:bg-gray-700/50 transition-colors">
+                <i class="fas fa-times"></i>
+            </button>
+            <h3 class="text-white text-xl mt-4">${title}</h3>
+        </div>
+    `;
+
+    const video = modal.querySelector('video');
+    const closeBtn = modal.querySelector('button');
+
+    closeBtn.addEventListener('click', () => {
+        video.pause();
+        modal.remove();
+    });
+
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            video.pause();
+            modal.remove();
+        }
+    });
+
+    document.body.appendChild(modal);
+    video.play();
+}
+
 // Initialize everything when the page loads
 document.addEventListener('DOMContentLoaded', () => {
+    initializeVideoStories();
     initializeGallery();
     initializeAlbums();
 
@@ -311,8 +514,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const hamburgerButton = document.getElementById('hamburger-button');
     const navMenu = document.getElementById('nav-menu');
     const darkModeToggle = document.getElementById('darkModeToggle');
-    
-    
+
+
     // Function to adjust header background for dark mode
     function adjustHeaderForDarkMode(isDark) {
         const header = document.getElementById('main-header');
@@ -324,7 +527,7 @@ document.addEventListener('DOMContentLoaded', function () {
             header.classList.add('bg-white');
         }
     }
-    
+
     // Dark mode toggle function
     function toggleDarkMode() {
         if (darkModeToggle.checked) {
@@ -339,7 +542,7 @@ document.addEventListener('DOMContentLoaded', function () {
             adjustHeaderForDarkMode(false);
         }
     }
-    
+
     // Listen for toggle click
     darkModeToggle.addEventListener('change', toggleDarkMode);
 
