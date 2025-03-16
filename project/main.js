@@ -2,13 +2,13 @@
 const videoStories = [
     {
         id: 1,
-        url: '/public/videos/bukber.mp4',
+        url: 'https://drive.google.com/file/d/1jw2YvN-kFcmIJjkreG95vqaSNxV45JX2/preview?embedded=true',
         thumbnail: 'Kegiatan/Bukber Family Quantum Leap5.jpg',
         title: 'Buka Bersama'
     },
     {
         id: 2,
-        url:'/public/videos/bukber1.mp4',
+        url: 'https://drive.google.com/file/d/1jw2YvN-kFcmIJjkreG95vqaSNxV45JX2/preview?embedded=true',
         thumbnail: 'Kegiatan/Bukber Family Quantum Leap.jpg',
         title: 'Akreditasi'
     },
@@ -59,12 +59,15 @@ function initializeVideoStories() {
             modal.className = 'fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50';
             modal.innerHTML = `
                 <div class="relative max-w-2xl w-full mx-4">
-                    <video src="${story.url}" autoplay controls class="w-full rounded-lg shadow-lg">
-                        Your browser does not support the video tag.
-                    </video>
-                    <button class="absolute top-4 right-4 text-white text-xl bg-gray-800 rounded-full p-2 hover:bg-gray-700" onclick="this.parentElement.parentElement.remove()">
-                        <i class="fas fa-times"></i>
-                    </button>
+                    <iframe src="${story.url}" frameborder="0" allowfullscreen class="w-full h-96 rounded-lg shadow-lg"></iframe>
+                    <div class="absolute top-4 right-4 flex gap-2">
+                        <button class="text-white text-xl bg-gray-800 rounded-full p-2 hover:bg-gray-700" onclick="toggleFullscreen(this.parentElement.parentElement)">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                        <button class="text-white text-xl bg-gray-800 rounded-full p-2 hover:bg-gray-700" onclick="this.parentElement.parentElement.parentElement.remove()">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
                 </div>
             `;
 
@@ -466,9 +469,14 @@ function openVideoModal(videoUrl, title) {
             <video src="${videoUrl}" controls class="w-full rounded-lg shadow-lg">
                 Your browser does not support the video tag.
             </video>
-            <button class="absolute top-4 right-4 text-white text-xl bg-gray-800/50 rounded-full w-8 h-8 flex items-center justify-center hover:bg-gray-700/50 transition-colors">
-                <i class="fas fa-times"></i>
-            </button>
+            <div class="absolute top-4 right-4 flex gap-2">
+                <button class="text-white text-xl bg-gray-800/50 rounded-full w-8 h-8 flex items-center justify-center hover:bg-gray-700/50 transition-colors" onclick="toggleFullscreen(this.parentElement.parentElement)">
+                    <i class="fas fa-expand"></i>
+                </button>
+                <button class="text-white text-xl bg-gray-800/50 rounded-full w-8 h-8 flex items-center justify-center hover:bg-gray-700/50 transition-colors" onclick="this.parentElement.parentElement.parentElement.remove()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
             <h3 class="text-white text-xl mt-4">${title}</h3>
         </div>
     `;
@@ -566,3 +574,16 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
+function toggleFullscreen(element) {
+    //Implement fullscreen functionality here using the browser's fullscreen API.  This is placeholder code.
+    if (element.requestFullscreen) {
+        element.requestFullscreen();
+    } else if (element.mozRequestFullScreen) { /* Firefox */
+        element.mozRequestFullScreen();
+    } else if (element.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+        element.webkitRequestFullscreen();
+    } else if (element.msRequestFullscreen) { /* IE/Edge */
+        element.msRequestFullscreen();
+    }
+}
