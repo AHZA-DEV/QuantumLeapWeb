@@ -2,13 +2,13 @@
 const videoStories = [
     {
         id: 1,
-        url: 'kegiatan/videos/bukber.mp4',
+        url: '/kegiatan/videos/bukber.mp4',
         thumbnail: 'Kegiatan/Bukber Family Quantum Leap5.jpg',
         title: 'Buka Bersama'
     },
     {
         id: 2,
-        url: 'kegiatan/videos/bukber1.mp4',
+        url: '/kegiatan/videos/bukber1.mp4',
         thumbnail: 'Kegiatan/Bukber Family Quantum Leap.jpg',
         title: 'Akreditasi'
     },
