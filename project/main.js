@@ -4,13 +4,31 @@ const videoStories = [
         id: 1,
         url: 'https://drive.google.com/file/d/1jw2YvN-kFcmIJjkreG95vqaSNxV45JX2/preview?embedded=true',
         thumbnail: 'Kegiatan/Bukber Family Quantum Leap5.jpg',
-        title: 'Buka Bersama'
+        title: 'Buka Bersama 2025'
     },
     {
         id: 2,
         url: 'https://drive.google.com/file/d/1OHZkmPP3D7W6v_60aHWDGHtgOiBIws1f/preview?embedded=true',
         thumbnail: 'Kegiatan/Bukber Family Quantum Leap.jpg',
-        title: 'Akreditasi'
+        title: 'Buka Bersama 2025'
+    },
+    {
+        id: 3,
+        url: 'https://drive.google.com/file/d/1bUgOZIctemt1Feg8r9PL6tweJJoe1aAq/preview?embedded=true',
+        thumbnail: 'Kegiatan/FamilyGathering.jpg',
+        title: 'Family Gathering'
+    },
+    {
+        id: 4,
+        url: 'https://drive.google.com/file/d/1Mwl9mz921ZVwIPuUlF561sClDW4hCxdc/preview?embedded=true',
+        thumbnail: 'Kegiatan/FamilyGathering.jpg',
+        title: 'Family Gathering'
+    },
+    {
+        id: 5,
+        url: 'https://drive.google.com/file/d/1BwluUMdMcSvDxIbmJdN_CC0oxYLSuxzZ/preview?embedded=true',
+        thumbnail: 'Kegiatan/FamilyGathering.jpg',
+        title: 'Family Gathering'
     },
     // {
     //     id: 3,
@@ -281,6 +299,94 @@ const galleryItems = [
         imageUrl: 'Kegiatan/Diklat.jpg',
         downloads: 0,
         date: '2024-02-15'
+    },
+    {         
+        id: 25,         
+        title: 'Kegiatan Family Gathering Quantum Leap',         
+        category: 'photo',         
+        imageUrl: 'Kegiatan/familygatharing.jpg',         
+        downloads: 0,         
+        date: '2024-02-15'     
+    },
+    {         
+        id: 26,         
+        title: 'Kegiatan Family Gathering Quantum Leap',         
+        category: 'photo',         
+        imageUrl: 'Kegiatan/familygatharing2.jpg',         
+        downloads: 0,         
+        date: '2024-02-16'     
+    },
+    {         
+        id: 27,         
+        title: 'Kegiatan Family Gathering Quantum Leap',         
+        category: 'photo',         
+        imageUrl: 'Kegiatan/familygatharing3.jpg',         
+        downloads: 0,         
+        date: '2024-02-17'     
+    },
+    {         
+        id: 28,         
+        title: 'Kegiatan Family Gathering Quantum Leap',         
+        category: 'photo',         
+        imageUrl: 'Kegiatan/familygatharing4.jpg',         
+        downloads: 0,         
+        date: '2024-02-18'     
+    },
+    {         
+        id: 29,         
+        title: 'Kegiatan Family Gathering Quantum Leap',         
+        category: 'photo',         
+        imageUrl: 'Kegiatan/familygatharing5.jpg',         
+        downloads: 0,         
+        date: '2024-02-19'     
+    },
+    {         
+        id: 30,         
+        title: 'Kegiatan Family Gathering Quantum Leap',         
+        category: 'photo',         
+        imageUrl: 'Kegiatan/familygatharing6.jpg',         
+        downloads: 0,         
+        date: '2024-02-20'     
+    },
+    {         
+        id: 31,         
+        title: 'Kegiatan Family Gathering Quantum Leap',         
+        category: 'photo',         
+        imageUrl: 'Kegiatan/familygatharing7.jpg',         
+        downloads: 0,         
+        date: '2024-02-21'     
+    },
+    {         
+        id: 32,         
+        title: 'Kegiatan Family Gathering Quantum Leap',         
+        category: 'photo',         
+        imageUrl: 'Kegiatan/familygatharing8.jpg',         
+        downloads: 0,         
+        date: '2024-02-22'     
+    },
+    {         
+        id: 33,         
+        title: 'Kegiatan Family Gathering Quantum Leap',         
+        category: 'photo',         
+        imageUrl: 'Kegiatan/familygatharing9.jpg',         
+        downloads: 0,         
+        date: '2024-02-23'     
+    },
+    {         
+        id: 34,         
+        title: 'Kegiatan Family Gathering Quantum Leap',         
+        category: 'photo',         
+        imageUrl: 'Kegiatan/familygatharing10.jpg',         
+        downloads: 0,         
+        date: '2024-02-24'     
+    },
+    {         
+        id: 35,         
+        title: 'Kegiatan Family Gathering Quantum Leap',         
+        category: 'photo',         
+        imageUrl: 'Kegiatan/familygatharing11.jpg',         
+        downloads: 0,         
+        date: '2024-02-25'     
     }
 ];
 
