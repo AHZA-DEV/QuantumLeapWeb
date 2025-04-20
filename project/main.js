@@ -8,7 +8,7 @@ const videoStories = [
     },
     {
         id: 2,
-        url: 'https://drive.google.com/file/d/1Zhz4saJoARDo1FeEzznxpGYsemwRbfBC/preview?embedded=true',
+        url: 'https://drive.google.com/file/d/1OHZkmPP3D7W6v_60aHWDGHtgOiBIws1f/preview?embedded=true',
         thumbnail: 'Kegiatan/Bukber Family Quantum Leap.jpg',
         title: 'Buka Bersama 2025'
     },
@@ -112,6 +112,7 @@ const galleryItems = [
         category: 'videos',
         type: 'video',
         url: 'https://drive.google.com/file/d/1jw2YvN-kFcmIJjkreG95vqaSNxV45JX2/preview?embedded=true',
+        thumbnail: 'Kegiatan/Bukber Family Quantum Leap5.jpg',
         downloads: 0,
         date: '2024-03-12'
     },
@@ -120,7 +121,8 @@ const galleryItems = [
         title: 'Video Bukber Family Quantum Leap 23, 2025',
         category: 'videos',
         type: 'video',
-        url: 'https://drive.google.com/file/d/1Zhz4saJoARDo1FeEzznxpGYsemwRbfBC/preview?embedded=true',
+        url: 'https://drive.google.com/file/d/1OHZkmPP3D7W6v_60aHWDGHtgOiBIws1f/preview?embedded=true',
+        thumbnail: 'Kegiatan/Bukber Family Quantum Leap.jpg',
         downloads: 0,
         date: '2024-03-12'
     },
@@ -433,12 +435,13 @@ function createGalleryItem(item) {
 
     let mediaContent;
     if (item.type === 'video') {
+        const thumbnail = item.thumbnail || 'Kegiatan/BukaBersama.jpg';
         mediaContent = `<div class="cursor-pointer video-preview relative" onclick="openVideoModal('${item.url}', '${item.title}')">
-            <div class="w-full h-64 bg-black">
-                <iframe src="${item.url}" frameborder="0" class="w-full h-full"></iframe>
-            </div>
-            <div class="absolute inset-0 flex items-center justify-center">
-                <i class="fas fa-play-circle text-4xl text-white opacity-80"></i>
+            <div class="w-full h-64 bg-black relative">
+                <img src="${thumbnail}" class="w-full h-full object-cover opacity-80" alt="${item.title}">
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <i class="fas fa-play-circle text-6xl text-white opacity-80 hover:opacity-100 transition-opacity"></i>
+                </div>
             </div>
         </div>`;
     } else {
@@ -692,10 +695,15 @@ function toggleFullscreen(element) {
     }
 }
 
+
+
+
+
+
 // Alert
 document.addEventListener('DOMContentLoaded', function() {
     const closeButtons = document.querySelectorAll('.close-btn, .understand-btn');
-    
+
     closeButtons.forEach(button => {
         button.addEventListener('click', function() {
             const alertContainer = document.querySelector('.alert-container');
@@ -703,20 +711,16 @@ document.addEventListener('DOMContentLoaded', function() {
             alertContainer.style.transform = 'translateY(100%)';
             alertContainer.style.opacity = '0';
             alertContainer.style.transition = 'all 0.5s ease-out';
-            
+
             setTimeout(() => {
                 alertContainer.remove();
             }, 500);
         });
     });
-    
+
     // Auto close after 10 seconds
     setTimeout(() => {
         const closeBtn = document.querySelector('.close-btn');
         if (closeBtn) closeBtn.click();
     }, 10000);
 });
-
-
-
-
