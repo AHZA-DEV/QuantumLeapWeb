@@ -12,6 +12,44 @@
 </head>
 
 <body class="bg-gray-100 light">
+        <!-- Alert -->
+    <div class="alert-container fixed bottom-4 right-4 w-full max-w-md z-50">
+        <div class="bg-amber-100 border-l-4 border-amber-500 rounded-lg shadow-lg overflow-hidden">
+            <div class="flex items-start p-4">
+                <div class="flex-shrink-0 warning-icon">
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-amber-200 rounded-full opacity-75 animate-ping"></div>
+                        <div class="relative flex items-center justify-center w-12 h-12 bg-amber-500 rounded-full">
+                            <i class="fas fa-exclamation-triangle text-white text-xl"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="ml-3 flex-1">
+                    <h3 class="text-lg font-medium text-amber-800">Mohon Maaf!</h3>
+                    <div class="mt-1 text-sm text-amber-700">
+                        <p>Mohon maaf apabila halaman website nya lelet karena kita hanya menggunakan penyedia layanan yang gratisan saja.</p>
+                    </div>
+                    <div class="mt-2 flex">
+                        <button type="button" class="understand-btn px-3 py-1 bg-amber-500 hover:bg-amber-600 text-white text-sm font-medium rounded-md">
+                            Mengerti
+                        </button>
+                    </div>
+                </div>
+                <div class="ml-4 flex-shrink-0 flex">
+                    <button class="close-btn bg-amber-100 rounded-md inline-flex text-amber-500 hover:text-amber-700 focus:outline-none">
+                        <span class="sr-only">Close</span>
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="bg-amber-200 px-4 py-2 text-xs text-amber-800 flex items-center">
+                <i class="fas fa-info-circle mr-2"></i>
+                <span>Website ini mungkin membutuhkan waktu loading lebih lama dari biasanya</span>
+                <span>-> jika ingin donasi silakan hubungi ketua</span>
+            </div>
+        </div>
+    </div>
+    <!-- Alert -->
     <!-- Header -->
     <header class="fixed w-full bg-white shadow-md z-50" id="main-header">
         <nav class="container mx-auto px-6 py-3">
