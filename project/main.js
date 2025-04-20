@@ -8,7 +8,7 @@ const videoStories = [
     },
     {
         id: 2,
-        url: 'https://drive.google.com/file/d/1OHZkmPP3D7W6v_60aHWDGHtgOiBIws1f/preview?embedded=true',
+        url: 'https://drive.google.com/file/d/1Zhz4saJoARDo1FeEzznxpGYsemwRbfBC/preview?embedded=true',
         thumbnail: 'Kegiatan/Bukber Family Quantum Leap.jpg',
         title: 'Buka Bersama 2025'
     },
