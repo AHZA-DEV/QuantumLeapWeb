@@ -691,3 +691,32 @@ function toggleFullscreen(element) {
         element.msRequestFullscreen();
     }
 }
+
+// Alert
+document.addEventListener('DOMContentLoaded', function() {
+    const closeButtons = document.querySelectorAll('.close-btn, .understand-btn');
+    
+    closeButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const alertContainer = document.querySelector('.alert-container');
+            alertContainer.style.animation = 'none';
+            alertContainer.style.transform = 'translateY(100%)';
+            alertContainer.style.opacity = '0';
+            alertContainer.style.transition = 'all 0.5s ease-out';
+            
+            setTimeout(() => {
+                alertContainer.remove();
+            }, 500);
+        });
+    });
+    
+    // Auto close after 10 seconds
+    setTimeout(() => {
+        const closeBtn = document.querySelector('.close-btn');
+        if (closeBtn) closeBtn.click();
+    }, 10000);
+});
+
+
+
+
