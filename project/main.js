@@ -120,7 +120,7 @@ const galleryItems = [
         title: 'Video Bukber Family Quantum Leap 23, 2025',
         category: 'videos',
         type: 'video',
-        url: 'https://drive.google.com/file/d/1OHZkmPP3D7W6v_60aHWDGHtgOiBIws1f/preview?embedded=true',
+        url: 'https://drive.google.com/file/d/1Zhz4saJoARDo1FeEzznxpGYsemwRbfBC/preview?embedded=true',
         downloads: 0,
         date: '2024-03-12'
     },
